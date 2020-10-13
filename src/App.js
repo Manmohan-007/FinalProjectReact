@@ -1,18 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import "./CommonStyle.css"
-import Header from "./Components/CommonComp/Header"
-import Footer from "./Components/CommonComp/footer"
+import Header from "./Components/CommonComp/Header/Header"
+import Footer from "./Components/CommonComp/Footer/Footer"
 import { Switch, BrowserRouter, Route, Redirect } from 'react-router-dom';
-
+import PracticeArenaPage from "./Container/PracticeArena/HomePage/PracticeArenaPage"
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
 
         <Header />
-
+        <PracticeArenaPage />
         <Footer />
       </div>
     </BrowserRouter>

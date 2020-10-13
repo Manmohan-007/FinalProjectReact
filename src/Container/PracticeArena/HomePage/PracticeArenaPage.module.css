@@ -1,0 +1,83 @@
+.MainWrapper {
+
+    margin: 0 auto;
+    width: 1200px;
+
+} 
+.Heading1{
+    font-weight: 500;
+    font-size: 40px;
+    color: rgba(0,0,0,0.8);
+    letter-spacing: 1px;
+    margin-bottom: 0;
+
+} 
+.Heading2{
+    margin-top: 10px;
+    font-family: Roboto,sans-serif;
+    color: rgba(0,0,0,0.6);
+    letter-spacing: 1px; 
+} 
+.MiddleWrapper{
+    margin: 1rem;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+
+} 
+.CardsWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+ 
+} 
+.CardsWrapper > a{
+width :  calc(25% - 10px); 
+margin: 5px ;
+
+}
+
+
+.Card{
+    background: #FFFFFF;
+    padding: 10px 20px;
+    width: 100% ; 
+    border-radius: 10px;
+    box-shadow: 0 0 2px 1px #0096ff;
+    color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    height: 15vh; 
+ 
+
+}
+
+.courseName{
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0;
+    letter-spacing: 1px;
+
+} 
+.units{
+    font-style: italic;
+    margin-top: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: rgba(0,0,0,0.6);
+
+} 
+.CardContent {
+    width: 50%;
+
+}
+.Thumbnail > img{
+    width: 65px;
+    height: 65px;
+} 
+
+* {
+
+box-sizing: border-box;
+
+}

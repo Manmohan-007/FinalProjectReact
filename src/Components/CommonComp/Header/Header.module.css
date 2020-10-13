@@ -1,0 +1,145 @@
+.MainWrapper{
+    width: 100%;
+    height: 65px;
+    z-index: 90;
+    padding: 1em 4.875em;
+    background-color: #fff;
+    box-shadow: 0 1px 1px #ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 90; 
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family:  'Open Sans', sans-serif;
+} 
+.LeftSide , .RightSideWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+} 
+.LogoLink > img{
+    width: 200px ;  
+    height:40px ;  
+
+} 
+.ContentWrapper{
+    margin: 0 24px;
+
+} 
+.Hamburger{
+display: none ; 
+} 
+
+.Hamburger > img {
+
+
+} 
+
+.NotificationWrapper{
+margin-right: 20px;
+
+} 
+
+.IconWrapper{
+    position: relative;
+
+}
+.IconWrapper > svg {
+    font-size: 20px;
+    cursor: pointer;
+    width: 20px !important;
+    height: 45px !important;
+
+} 
+.Badge{
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem; 
+    min-width: 10px; 
+    position: absolute;
+    top: 3px;
+    right: -12px; 
+    color: #fff;
+    background-color: #dc3545;
+
+} 
+.DropdownContent{
+    position: relative;
+    padding: 0 12px;
+}
+
+.UserName{
+
+
+} 
+.UserName > svg  {
+margin-left: 20px;
+
+} 
+
+
+.DropdownContainer{
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;
+    border-color: rgb(0, 0, 0);
+    position: absolute;
+    transform: translate3d(-50px, 28px, 0px);
+    top: 0px;
+    left: 0px;
+    will-change: transform;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem; 
+    z-index: 1000;
+
+
+} 
+.DropdownItem{
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+} 
+.DropdownDivider {
+    height: 0;
+    margin: .5rem 0;
+    overflow: hidden;
+    border-top: 1px solid #e9ecef;
+
+} 
+.DropdownItem:hover{
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa;
+
+} 
+
