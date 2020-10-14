@@ -6,6 +6,9 @@ import { Switch, BrowserRouter, Route, Redirect } from 'react-router-dom';
 import PracticeArenaPage from "./Container/PracticeArena/HomePage/PracticeArenaPage"
 import TopicList from './Container/PracticeArena/Topics/TopicList';
 import Problems from './Container/PracticeArena/Problems/Problems';
+import ClassroomPage from './Container/Classroom/classroom';
+import GradesPage from './Container/GradesPage/grades';
+import ProgramDetailsPage from './Container/program/program'
 
 function App() {
   return (
@@ -13,11 +16,14 @@ function App() {
       <div className="App">
 
         <Header />
+        <ProgramDetailsPage modulesNo="6" weeks="20" name="RB-020420 - React Developer Program" batchNo="RB020420"/>
+        {/* <ClassroomPage /> */}
+        {/* <GradesPage /> */}
         {/* <Switch>      
          <PracticeArenaPage />
         </Switch>     */}
         {/* <TopicList /> */}
-        <Problems />
+        {/* <Problems /> */}
         <Footer />
       </div>
     </BrowserRouter>

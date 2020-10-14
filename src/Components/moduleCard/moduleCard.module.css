@@ -1,0 +1,44 @@
+.cardWrapper{
+    width: 180px;
+    height: 250px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0 0 2px #0096ff;
+    padding: 12px;
+    text-align: center;
+}
+.detailWrapper{
+    width: 100%;
+    box-sizing: border-box;
+}
+.moduleImage{
+    width: 80px;
+    height: 80px;
+}
+.title{
+    color: #6E6E6E;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+.authorWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.authorLogo{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.author{
+    font-size: 13px;
+    font-weight: 600;
+    color: #409CFF;
+}
+.week{
+    color: #666;
+    font-size: 12px;
+    font-weight: 600;
+}
+
