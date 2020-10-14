@@ -46,6 +46,13 @@
     align-items: center; 
     line-height: 1.5;
 } 
+
+.Topic:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    position: relative;
+    top: -1px;
+}
 .Easy{
     background-color: #0095FF;
     padding: 1rem;
