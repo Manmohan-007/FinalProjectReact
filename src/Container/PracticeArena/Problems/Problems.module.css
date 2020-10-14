@@ -1,0 +1,96 @@
+.Container{ 
+    
+  
+    max-width: 1140px; 
+    margin: 2.5rem auto 0 auto; 
+    padding-right: 15px;
+    padding-left: 15px; 
+    font-family: Raleway; 
+    line-height: 1.5;
+} 
+.Header{
+    font-style: italic;
+    color: black;
+} 
+
+.Header:hover {
+    color: #007bff;
+
+} 
+.Title{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px; 
+    justify-content: space-between; 
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%; 
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px; 
+    margin-bottom : -18px ; 
+} 
+.Title > h2{
+    margin-top: 1rem; 
+    font-weight: bold; 
+    font-size: 2rem;
+} 
+.Topic{
+    font-family: 'Roboto', sans-serif;
+    margin: 1.5rem;
+    border-radius: 5px;
+    border: 2px solid #0095FF;
+    color: black;
+    display: flex;
+    align-items: center; 
+    line-height: 1.5;
+} 
+.Easy{
+    background-color: #0095FF;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+.Topic > span {
+    width: 10vw;
+} 
+.EasyBorder{
+    border: 2px solid #0095FF!important; 
+} 
+
+.ProblemDetails{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 10px;
+
+} 
+.ProblemTitle{
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+
+}
+.ProblemDifficulty{
+    font-family: "Roboto" , sans-serif;
+    font-style: italic;
+    padding-left: 1rem;
+    padding-top: 1rem;
+} 
+.Status{
+    padding: 1px 5px;
+    width: auto;
+    border: 2px solid #007bff;
+    color: #007bff;
+} 
+.Medium{
+    background-color: #8455FC;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+} 
+.MediumBorder{
+    border: 2px solid #8455FC;
+}

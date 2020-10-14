@@ -1,0 +1,115 @@
+.AssignmentStatusCard{
+    margin: 24px 0;
+    color: rgba(0,0,0,0.7);
+    text-transform: capitalize;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+} 
+.AssignmenDetails{
+
+} 
+.AssNumName{
+    margin: 0 0 12px 0; 
+    font-size: 19px;
+    font-weight: 700;
+    font-family: "Raleway",sans-serif;
+} 
+.AssNum ,.AssName{
+  color:   rgba(0,0,0,0.7);
+} 
+.AssignmentScore{
+    font-size: 19px;
+    font-weight: 700;
+    font-family: Raleway,sans-serif; 
+
+}
+.error{
+    color: #cc0000;
+} 
+
+hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1); 
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+
+
+} 
+.StudentDashboardCard{ 
+    margin: 95px auto;
+    width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 0 25px #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+} 
+.SdCardProfileContainer{
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+} 
+.SdCardProfileContainer > img {
+    height: 124px;
+    width: 124px;
+    margin: 24px 24px 24px 0;
+
+} 
+.SdCardTagsContainer{
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+} 
+.Heading{
+    display: flex;
+    align-items: baseline;
+    margin: 0 0 34px 0; 
+    color: #0096ff;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: .4px;
+    text-align: left;
+    font-family: "Raleway",sans-serif;
+} 
+.Details{
+    margin: 0 22px 0 0;
+    width: 100%;
+    box-sizing: border-box;
+    color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+} 
+.Value{
+    color: rgba(0,0,0,0.7);
+    font-size: 19px;
+    font-weight: 600;
+}
+.Tag {
+    color: rgba(0,0,0,0.4);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    text-transform: capitalize;
+} 
+.CardStatus{
+    width: 90%;
+    margin: 20px auto 0px auto;
+}
