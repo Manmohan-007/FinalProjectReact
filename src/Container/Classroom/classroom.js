@@ -4,14 +4,21 @@ import Card from '../../Components/cards/card'
  
 class classRoom extends React.Component{
     render(){
+        const data = JSON.parse(window.localStorage.getItem("finalProjectData")).classroomCards;
+        const AllCards = data.map(item=>{
+            return item.notEdyoda == "false"?
+            <Card key={item.id} id={item.id} notEdyoda={item.notEdyoda} title={item.title} units={item.units} />
+            :
+            <Card key ={item.id} id={item.id} notEdyoda={item.notEdyoda} name={item.cardName} batchNo={item.batchNo} modulesNo={item.modulesNo} weeks={item.weeks} title={item.title} units={item.units} />
+
+        })
         return(
             <div className={classes.mainWrapper}>
                 <div className={classes.classRoomPage}>
                     <h2 className={classes.heading}>Classroom</h2>
                     <p className={classes.text}>Your Enrolled Courses</p>
                     <div className={classes.cardsContainer}>
-                        <Card key='1' id='1' notEdyoda="false" title='PY - 150520 Python Developer' units="30" />
-                        <Card key ='2' id='2' notEdyoda='true' name='Data Structures & Algo' batchNo='RB-020420' modulesNo='6' weeks='20' title='React Developer Program' units='9' />
+                        {AllCards}
                     </div>
                 </div>
             </div>

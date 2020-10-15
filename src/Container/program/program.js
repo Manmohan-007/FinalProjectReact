@@ -4,14 +4,30 @@ import ModuleCard from '../../Components/moduleCard/moduleCard'
 
 class program extends React.Component{
     render(){
+        const mainData = JSON.parse(window.localStorage.getItem("finalProjectData"))
+        let topCardData = null;
+        mainData.classroomCards.map(item=>{
+            if(item.id == this.props.match.params.id)  topCardData = item
+        })
+        console.log(topCardData, "toppppppppppppp")
+        const moduleData = mainData.singleCardPage;
+        const modules = moduleData.modules.map(item=>{
+            return <ModuleCard key={item.id} id={item.id} logo={item.logo} title={item.title} author={item.author} weeks={item.weeks} avatar={item.avatar}/>
+        })
         return(
             <div className={classes.programs}>
                 <div className={classes.cardImageWrapper}>
                     <img className={classes.thumbnail} src="https://assessments.edyoda.com/static/images/Only-Image.jpg" alt="" />
                     {
+                        topCardData.notEdyoda === false?
+                        <div className={classes.edyProDiv}>
+                            <p className={classes.singleEdy}>EDYODA</p>
+                            <p className={classes.singlePro}>PROGRAMS</p>
+                        </div>
+                        :
                         <div>
                             <div className={classes.cardDetailWrapper}>
-                                <p className={classes.subject}>{this.props.name}</p>
+                                <p className={classes.subject}>{topCardData.cardName}</p>
                                 <p className={classes.batch}>{this.props.batchNo}</p>
                             </div>
                             <div className={classes.wrapperDiv}>
@@ -35,22 +51,22 @@ class program extends React.Component{
                         <p className={classes.heading}>Program Progress</p>
                         <div className={classes.scoreWrapper}>
                             <div className={classes.progBox}>
-                                <p className={classes.score}>1</p>
+                                <p className={classes.score}>{moduleData.classRank}</p>
                                 <p className={classes.field}>Class Rank</p>
                             </div>
                             <div className={classes.progBox}>
-                                <p className={classes.score}>100.0%</p>
+                                <p className={classes.score}>{moduleData.avgScore}</p>
                                 <p className={classes.field}>Avg Score</p>
                             </div>
                             <div className={classes.progBox}>
-                                <p className={classes.score}>97.32</p>
+                                <p className={classes.score}>{moduleData.shs}</p>
                                 <p className={classes.field}>SHS</p>
                             </div>
                         </div>
                     </div>
                     <p className={classes.heading}>Modules</p>
                     <div className={classes.modulesWrapper}>
-                        <ModuleCard />
+                        {modules}
                     </div>
                 </div>
             </div>

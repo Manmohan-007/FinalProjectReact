@@ -6,6 +6,12 @@
     box-shadow: 0 0 2px #0096ff;
     padding: 12px;
     text-align: center;
+    background-color: #fff;
+    margin: 0px 6px;
+    cursor: pointer;
+}
+.cardWrapper:hover{
+    box-shadow: 0 0 4px #0096ff;
 }
 .detailWrapper{
     width: 100%;
