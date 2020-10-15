@@ -5,11 +5,10 @@ import ModuleCard from '../../Components/moduleCard/moduleCard'
 class program extends React.Component{
     render(){
         const mainData = JSON.parse(window.localStorage.getItem("finalProjectData"))
-        let topCardData = null;
+        let topCardData;
         mainData.classroomCards.map(item=>{
             if(item.id == this.props.match.params.id)  topCardData = item
         })
-        console.log(topCardData, "toppppppppppppp")
         const moduleData = mainData.singleCardPage;
         const modules = moduleData.modules.map(item=>{
             return <ModuleCard key={item.id} id={item.id} logo={item.logo} title={item.title} author={item.author} weeks={item.weeks} avatar={item.avatar}/>
@@ -19,6 +18,7 @@ class program extends React.Component{
                 <div className={classes.cardImageWrapper}>
                     <img className={classes.thumbnail} src="https://assessments.edyoda.com/static/images/Only-Image.jpg" alt="" />
                     {
+                        topCardData!=undefined?
                         topCardData.notEdyoda === false?
                         <div className={classes.edyProDiv}>
                             <p className={classes.singleEdy}>EDYODA</p>
@@ -44,6 +44,8 @@ class program extends React.Component{
                             </div>
 
                         </div>
+                        :
+                        null
                     }
                 </div>
                 <div className={classes.allWrapper}>

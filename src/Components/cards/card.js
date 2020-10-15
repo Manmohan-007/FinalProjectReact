@@ -11,7 +11,6 @@ class card extends React.Component{
             <Link to={`/classroom/modules/${this.props.id}`}>
                 <div className={classes.card}>
                     <div className={classes.cardImageWrapper}>
-                        {/* https://edyoda.s3.amazonaws.com/media/blog-images/learn-artificial-intelligence.jpeg */}
                         <img className={classes.thumbnail} src={this.props.notEdyoda==false?"https://assessments.edyoda.com/uploads/static/images/RB020420/edyoda_programs.png" :`${Image2}`} alt="" />
                         {
                             this.props.notEdyoda == false?null

@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 class moduleCard extends React.Component{
     render(){
         return(
-            <Link to="">
+            <Link to="/classroom/module/grades">
                 <div className={classes.cardWrapper}>
                     <div className={classes.detailWrapper}>
                         <img className={classes.moduleImage} src={this.props.logo} alt="" />

@@ -47,7 +47,7 @@ class App extends React.Component {
               <Route exact path="/classroom/modules/:id" render={(responseProps)=>{
                 return <ProgramDetailsPage modulesNo="6" weeks="20" name="RB-020420 - React Developer Program" batchNo="RB020420" {...responseProps}/>
               }}/>
-              <Route path="/classroom/modules/grades" component={GradesPage} />
+              <Route exact path="/classroom/module/grades" component={GradesPage} />
           </Hoc>
         </Switch>
         <Footer />
