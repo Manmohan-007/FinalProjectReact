@@ -12,29 +12,6 @@ class PracticeArenaPage extends Component {
                     <div className={classes.CardsWrapper}>
 
                         <PracticeArenaCard />
-                        <PracticeArenaCard />
-                        <PracticeArenaCard />
-                        <PracticeArenaCard />
-                        <PracticeArenaCard />
-                        <PracticeArenaCard />
-                        <PracticeArenaCard />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     </div>
                 </div>
 

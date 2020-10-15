@@ -4,24 +4,35 @@ import { Link } from "react-router-dom"
 
 class TopicList extends Component {
     render() {
-
-        const mapped =
+        const CardData = JSON.parse(localStorage.getItem("finalProjectData")).modulesTopics;
+        console.log(CardData);
+        const MappedData = CardData.map(item => {
+            return (
+                
             <>
-                <div className={classes.AssignmentStatusCard}>
-                    <div className={classes.AssignmenDetails}>
-                        <div className={classes.AssNumName}>
-                            <Link href="/courses/PYTHON/1">
-                                <span className={classes.AssNum}>1). </span>
-                                <span className={classes.AssName}>Operators and Conditional Statements</span>
-                            </Link>
+                    <div className={classes.AssignmentStatusCard}>
+                        <div className={classes.AssignmenDetails}>
+                            <div className={classes.AssNumName}>
+                                <Link to="/topics/problems">
+                                    <span className={classes.AssNum}>{item.id}). </span>
+                                    <span className={classes.AssName}>{item.title}</span>
+                                </Link>
+                            </div>
                         </div>
-                    </div>
-                    <div className={`${classes.AssignmentScore} ${classes.error}`}>
-                        Pending
-                </div>
-                </div>
-                <hr />
-            </>
+                        <div className={`${item.status == "Pending" ? `${classes.error}` : null}  ${classes.AssignmentScore}`  }>
+                    {item.status}
+            </div>
+            </div>
+            <hr />
+        </>
+
+
+
+          )
+
+
+        })
+        
 
 
         return (
@@ -47,10 +58,8 @@ class TopicList extends Component {
                 {/*PROFILE PART ENDS*/}
                 {/*Assignment part*/}
                 <div className={classes.CardStatus}>
-                    {mapped}
-                    {mapped}
-                    {mapped}
-                    {mapped}
+                    {MappedData}
+                
                 </div>
             </div>
 

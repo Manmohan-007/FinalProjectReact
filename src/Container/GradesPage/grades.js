@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './grades.module.css';
+import VideoPlayer from '../../Components/VideoPlayer/video'
 
 class grades extends React.Component{
     render(){

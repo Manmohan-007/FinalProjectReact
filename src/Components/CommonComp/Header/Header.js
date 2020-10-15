@@ -12,8 +12,8 @@ export default function Header() {
                         </Link>
                     </div>
                     <div className={classes.ContentWrapper}><Link to="/" >practice arena</Link> </div>
-                    <div className={classes.ContentWrapper}><Link to="" >classroom</Link> </div>
-                    <div className={classes.ContentWrapper}><Link to="https://recruitcrm.io/jobs/EdYoda_jobs" target="_blank" >View Jobs</Link> </div>
+                    <div className={classes.ContentWrapper}><Link to="/classroom" >classroom</Link> </div>
+                    <div className={classes.ContentWrapper}><Link to="/" target="_blank" >View Jobs</Link></div>
                     <div className={classes.Hamburger}>
                         <img src="https://assessments.edyoda.com/static/images/burger-svg-icon.svg" alt="icon" onclick="" />
                     </div>
@@ -25,18 +25,14 @@ export default function Header() {
                             <span className={classes.Badge}>4</span>
 
                         </div>
-
                     </div>
 
                     <div className={classes.DropdownContent}>
                         <Link className={classes.UserName} to="#"  >
-                            Manmohan
+                            User
                             <i class="fas fa-caret-down"></i>
                         </Link>
                         <div className={classes.DropdownContainer} >
-
-
-
                             <Link className={classes.DropdownItem} to="#">Profile</Link>
                             <Link className={classes.DropdownItem} to="#" target="_blank" >Update Job Profile</Link>
                             <div className={classes.DropdownDivider} />
@@ -46,9 +42,6 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-
-
-
         </>
     )
 }
