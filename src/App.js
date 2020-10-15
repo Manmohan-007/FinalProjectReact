@@ -9,6 +9,8 @@ import Problems from './Container/PracticeArena/Problems/Problems';
 import ClassroomPage from './Container/Classroom/classroom';
 import GradesPage from './Container/GradesPage/grades';
 import ProgramDetailsPage from './Container/program/program';
+import UnitsPage from "./Container/UnitsPage/UnitsPage";
+import SessionPlan from "./Container/SessionPlan/SessionPlan";
 import Hoc from './Components/Hoc/hoc';
 import axios from 'axios';
 
@@ -48,6 +50,8 @@ class App extends React.Component {
                 return <ProgramDetailsPage modulesNo="6" weeks="20" name="RB-020420 - React Developer Program" batchNo="RB020420" {...responseProps}/>
               }}/>
               <Route exact path="/classroom/module/grades" component={GradesPage} />
+              <Route exact path={"/classroom/module/units"} component={UnitsPage} />
+              <Route exact path={"/classroom/module/session_plan"} component={SessionPlan} />
           </Hoc>
         </Switch>
         <Footer />
