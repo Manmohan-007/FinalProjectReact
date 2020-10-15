@@ -21,10 +21,10 @@ class PracticeArenaPage extends Component {
                                 <div className={classes.CardContent}>
                                     <div className={classes.courseName}>
                                         Python
-            </div>
+                                    </div>
                                     <div className={classes.units}>
                                         101 Units
-            </div>
+                                    </div>
                                 </div>
                             </div>
                         </Link>
