@@ -16,14 +16,13 @@ function App() {
       <div className="App">
 
         <Header />
-        <ProgramDetailsPage modulesNo="6" weeks="20" name="RB-020420 - React Developer Program" batchNo="RB020420"/>
-        {/* <ClassroomPage /> */}
-        {/* <GradesPage /> */}
-        {/* <Switch>      
-         <PracticeArenaPage />
-        </Switch>     */}
-        {/* <TopicList /> */}
-        {/* <Problems /> */}
+        <ProgramDetailsPage modulesNo="6" weeks="20" name="RB-020420 - React Developer Program" batchNo="RB020420" />
+        <ClassroomPage />
+        <GradesPage />
+
+        <PracticeArenaPage />
+        <TopicList />
+        <Problems />
         <Footer />
       </div>
     </BrowserRouter>
