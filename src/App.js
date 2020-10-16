@@ -13,7 +13,7 @@ import UnitsPage from "./Container/UnitsPage/UnitsPage";
 import SessionPlan from "./Container/SessionPlan/SessionPlan";
 import Hoc from './Components/Hoc/hoc';
 import axios from 'axios';
-// https://player.vimeo.com/video/
+import VideoPlayer from './Components/VideoPlayer/video'
 class App extends React.Component {
 
   state = {
@@ -51,6 +51,7 @@ class App extends React.Component {
               <Route exact path="/classroom/module/grades" component={GradesPage} />
               <Route exact path={"/classroom/module/units"} component={UnitsPage} />
               <Route exact path={"/classroom/module/session_plan"} component={SessionPlan} />
+              <Route exact path={"/classroom/module/session_video/:vimeoId"} component={VideoPlayer}/>
             </Hoc>
           </Switch>
           <Footer />

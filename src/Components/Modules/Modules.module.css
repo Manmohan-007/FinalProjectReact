@@ -1,1 +1,94 @@
-.MainContainer {    background-color: #fff;    width: 100%;    border-radius: 6px;    box-shadow: 0 0 6px #ccc;    padding: 24px;    box-sizing: border-box;    margin: 36px 0;}.MainContainer:first-child, .MainContainer:last-child {    margin: 0;}.MainTitleContainer {    background-color: #fff;    width: 100%;    display: flex;    justify-content: space-between;    align-items: center;}.ModuleTitle {    font-size: 24px;    font-weight: 700;    max-width: 80%;    white-space: nowrap;    text-overflow: ellipsis;    overflow: hidden;}.DropdownContainer {    padding: 4px;    font-size: 22px;    font-weight: 500;    animation-duration: 1s;    transition: all 0.3s ease;    animation-name: DropdownIconAnimation;}.MainContainer:hover {    cursor: pointer;    box-shadow: 0 0 6px #aaa;}.ModuleContents {    font-size: 16px;    font-weight: 500;    overflow: hidden;    height: 0;    animation: accordian;    transition: all 0.4s ease;}.MoreAboutModules {    margin: 12px 0 0 0;    color: #007bff;}.MoreAboutModules:hover {    cursor: pointer;    color: #0057B3;}.Active {    display: block;    height: 75px;    animation-name: accordian;}.ActiveDrop {    animation-name: DropdownIconAnimation;    transform: rotate(180deg);}@keyframes accordian {    0% {        height: 5%;    }    50% {        height: 65%;    }    100% {        height: 100%;    }}@keyframes DropdownIconAnimation {    100% {        transform: rotate(180deg);    }}
+.MainContainer {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 0 6px #ccc;
+    padding: 24px;
+    box-sizing: border-box;
+    margin: 36px 0;
+}
+
+.MainContainer:first-child, .MainContainer:last-child {
+    margin: 0;
+}
+
+.MainTitleContainer {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ModuleTitle {
+    font-size: 24px;
+    font-weight: 700;
+    max-width: 80%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.DropdownContainer {
+    padding: 4px;
+    font-size: 22px;
+    font-weight: 500;
+    animation-duration: 1s;
+    transition: all 0.3s ease;
+    animation-name: DropdownIconAnimation;
+}
+
+.MainContainer:hover {
+    cursor: pointer;
+    box-shadow: 0 0 6px #aaa;
+}
+
+.ModuleContents {
+    font-size: 16px;
+    font-weight: 500;
+    overflow: hidden;
+    height: 0px;
+    animation: accordian;
+    transition: all 0.4s ease;
+}
+
+.MoreAboutModules {
+    margin: 12px 0 0 0;
+    color: #007bff;
+}
+
+.MoreAboutModules:hover {
+    cursor: pointer;
+    color: #0057B3;
+}
+
+.Active {
+    display: block;
+    height: 75px;
+    animation-name: accordian;
+}
+
+.ActiveDrop {
+    animation-name: DropdownIconAnimation;
+    transform: rotate(180deg);
+}
+
+@keyframes accordian {
+    0% {
+        height: 5%;
+    }
+
+    50% {
+        height: 65%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes DropdownIconAnimation {
+    100% {
+        transform: rotate(30deg);
+    }
+}
