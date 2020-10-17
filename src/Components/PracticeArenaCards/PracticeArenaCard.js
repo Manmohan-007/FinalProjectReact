@@ -1,17 +1,23 @@
-import React, { Component } from 'react'
-import classes from "./PracticeArenaCard.module.css"
-import { Link } from "react-router-dom"
+import React, { Component } from 'react';
+import classes from "./PracticeArenaCard.module.css";
+import { Link } from "react-router-dom";
+import {connect} from 'react-redux';
+
+
 class PracticeArenaCard extends Component {
 
+    cardsOnClick(props){
+        if(props.loginStatus == "false"){
+            props.updateSignUpStatus()
+        }
+    }
 
     render() {
         const CardData = JSON.parse(localStorage.getItem("finalProjectData")).arenaPage;
-        console.log(CardData);
-
         const MappedData = CardData.map(item => {
             return (
-                <Link to="/topics">
-                    <div className={classes.Card}>
+                <Link to={this.props.loginStatus=="true"?`/topics/${item.id}`: '/'}>
+                    <div onClick={()=>this.cardsOnClick(this.props)} className={classes.Card}>
                         <div className={classes.CardContent} style={{ padding: "0 0 0 10px" }}>
                             <div className={classes.Thumbnail}>
                                 <img src={item.logo} alt="edyoda_img" />
@@ -29,15 +35,7 @@ class PracticeArenaCard extends Component {
                 </Link>
 
             )
-
-
-
         })
-
-
-
-
-
 
         return (
             <>
@@ -47,4 +45,22 @@ class PracticeArenaCard extends Component {
     }
 }
 
-export default PracticeArenaCard
+
+const getData = (globalStore)=>{
+    return{
+        login: globalStore.loginPage,
+        signup: globalStore.signupPage,
+        loginStatus: globalStore.loginStatus
+    }
+}
+
+const changeData = (dispatch)=>{
+    return{
+        updateSignUpStatus:()=>{
+            return dispatch({type: "changeSignupStatus"})
+        }
+    }
+}
+  
+
+export default connect(getData,changeData)(PracticeArenaCard)

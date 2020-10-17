@@ -33,13 +33,20 @@
 .CardsWrapper > a{
 width :  calc(25% - 10px); 
 margin: 5px ;
-
+}
+* {
+box-sizing: border-box;
 }
 
-
-
-* {
-
-box-sizing: border-box;
-
+.signupActive{
+    display: none;
+}
+.loginActive{
+    display: none;
+}
+.alterSignupActive{
+    display: block;
+}
+.alterLoginActive{
+    display: block;
 }

@@ -13,12 +13,27 @@ import UnitsPage from "./Container/UnitsPage/UnitsPage";
 import SessionPlan from "./Container/SessionPlan/SessionPlan";
 import Hoc from './Components/Hoc/hoc';
 import axios from 'axios';
-import VideoPlayer from './Components/VideoPlayer/video'
+import VideoPlayer from './Components/VideoPlayer/video';
+import {connect} from 'react-redux';
+
+
 class App extends React.Component {
 
   state = {
-    isPresent: false
+    isPresent: false,
+    loginStatus: this.checkLoginStatus()
   }
+
+  checkLoginStatus(){
+    if(window.localStorage.getItem("FinalLoginStatus") == null){
+      window.localStorage.setItem("FinalLoginStatus", false)
+      return "false"
+    }
+    else {
+      return window.localStorage.getItem("FinalLoginStatus")
+    }
+  }
+
   componentDidMount() {
     if (this.state.isPresent === false) {
       axios.get("https://5eeba96c5e298b0016b69331.mockapi.io/TODOCards")
@@ -35,30 +50,39 @@ class App extends React.Component {
 
   render() {
     return (
+      <>
       <BrowserRouter>
-
         <div className="App">
-          <Header />
-          <Switch>
-            <Hoc data={window.localStorage.getItem("finalProjectData")}>
-              <Route exact path="/" component={PracticeArenaPage} />
-              <Route exact path="/topics" component={TopicList} />
-              <Route exact path="/topics/problems" component={Problems} />
-              <Route exact path="/classroom" component={ClassroomPage} />
-              <Route exact path="/classroom/modules/:id" render={(responseProps) => {
-                return <ProgramDetailsPage modulesNo="6" weeks="20" name="RB-020420 - React Developer Program" batchNo="RB020420" {...responseProps} />
-              }} />
-              <Route exact path="/classroom/module/grades" component={GradesPage} />
-              <Route exact path={"/classroom/module/units"} component={UnitsPage} />
-              <Route exact path={"/classroom/module/session_plan"} component={SessionPlan} />
-              <Route exact path={"/classroom/module/session_video/:vimeoId"} component={VideoPlayer}/>
-            </Hoc>
-          </Switch>
+          <Route path="/" component={Header}></Route>
+          <Hoc data={window.localStorage.getItem("finalProjectData")}>
+            <Switch>
+                <Route exact path="/" component={PracticeArenaPage}/>
+                <Route exact path="/topics/:id" component={TopicList} />
+                <Route exact path="/topics/probs" component={Problems} />
+                <Route exact path="/classroom" component={ClassroomPage} />
+                <Route exact path="/classroom/modules/:id" render={(responseProps) => {
+                  return <ProgramDetailsPage modulesNo="6" weeks="20" name="RB-020420 - React Developer Program" batchNo="RB020420" {...responseProps} />
+                }} />
+                <Route exact path="/classroom/module/grades" component={GradesPage} />
+                <Route exact path={"/classroom/module/units"} component={UnitsPage} />
+                <Route exact path={"/classroom/module/session_plan"} component={SessionPlan} />
+                <Route exact path={"/classroom/module/session_video/:vimeoId"} component={VideoPlayer}/>
+            </Switch>
+          </Hoc>
           <Footer />
         </div>
       </BrowserRouter>
+      </>
     );
   }
 }
 
-export default App;
+
+const getData = (globalStore)=>{
+  return{
+    login: globalStore.loginPage,
+    signup: globalStore.signupPage
+  }
+}
+
+export default connect(getData)(App);

@@ -32,7 +32,7 @@
 } 
 .ContentWrapper{
     margin: 0 24px;
-
+    cursor: pointer
 } 
 .Hamburger{
 display: none ; 
@@ -143,3 +143,31 @@ margin-left: 20px;
 
 } 
 
+.displayBlockUser{
+    display: none
+}
+.rightLoginWrapper{
+    display: flex;
+    align-items: center;
+}
+.loginButton{
+    color: #3194FF;
+    font-size: 16px;
+    margin: 0;
+    cursor: pointer;
+}
+.signButton{
+    border-radius: 50px;
+    background: linear-gradient(269deg,#0048ff,#0096ff);
+    color: #fff;
+    padding: 11px 22px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    margin-left: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.signUpInactive{
+    display: none;
+}

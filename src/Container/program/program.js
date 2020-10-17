@@ -11,7 +11,7 @@ class program extends React.Component{
         })
         const moduleData = mainData.singleCardPage;
         const modules = moduleData.modules.map(item=>{
-            return <ModuleCard key={item.id} id={item.id} logo={item.logo} title={item.title} author={item.author} weeks={item.weeks} avatar={item.avatar}/>
+            return <ModuleCard key={item.id} id={item.id} logo={item.logo} title={item.title} author={item.author} weeks={item.weeks} avatar={item.avatar} detailName={item.detailName}/>
         })
         return(
             <div className={classes.programs}>
