@@ -1,15 +1,17 @@
 import React from 'react';
 import classes from './card.module.css';
-import Image1 from '../../Assests/EdyodaBackground (2).jpg';
 import Image2 from '../../Assests/EdyodaBackground (3).jpg';
 import {Link} from 'react-router-dom';
+import { connect } from 'react-redux'
 
  
 class card extends React.Component{
     render(){
         return(
             <Link to={`/classroom/modules/${this.props.id}`}>
-                <div className={classes.card}>
+                <div onClick={() => {
+                    this.props.updateModule(this.props.id)
+                }} className={classes.card}>
                     <div className={classes.cardImageWrapper}>
                         <img className={classes.thumbnail} src={this.props.notEdyoda==false?"https://assessments.edyoda.com/uploads/static/images/RB020420/edyoda_programs.png" :`${Image2}`} alt="" />
                         {
@@ -54,4 +56,10 @@ class card extends React.Component{
     }
 }
 
-export default card;
+let updateGlobalState = (dispatch) => {
+    return {
+        updateModule: (data) => dispatch({type: 'ACTIVE_MODULE', data: data})
+    }
+}
+
+export default connect('', updateGlobalState)(card);

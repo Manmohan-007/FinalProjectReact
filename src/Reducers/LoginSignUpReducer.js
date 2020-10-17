@@ -14,7 +14,7 @@ function checkLoginStatus(){
     }
 }
 
-const mainReducer = (state = inititalState, action)=>{
+const loginSignUpReducer = (state = inititalState, action)=>{
     switch(action.type){
       case "changeSignupStatus":
         return {...state, signupPage: true, loginPage: false}
@@ -27,4 +27,4 @@ const mainReducer = (state = inititalState, action)=>{
     } 
 }
 
-export default mainReducer
+export default loginSignUpReducer
