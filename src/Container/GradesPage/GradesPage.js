@@ -1,16 +1,17 @@
 import React from 'react';
 import classes from './GradesPage.module.css';
-// import VideoPlayer from '../../Components/VideoPlayer/video'
+import { connect } from 'react-redux'
 
 class GradesPage extends React.Component{
     render(){
+        console.log(this.props)
         return(
             <div className={classes.mainWrapper}>
                 <div className={classes.contentWrapper}>
                 <div className={classes.moduleMarksWrapper}>
-                    <img className={classes.subjectLogo} src="https://assessments.edyoda.com/uploads/static/images/module_icon/aws_4QRD91l.png" alt="AWS-LOGO" />
+                    <img className={classes.subjectLogo} src={this.props.data.logo} alt={this.props.data.title} />
                     <div className={classes.detailsWrapper}>
-                        <p className={classes.title}>Intro to AWS</p>
+                        <p className={classes.title}>{this.props.data.title}</p>
                         <div className={classes.marksWrapper}>
                             <div className={classes.gradesDiv}>
                                 <p className={classes.marks}>1</p>
@@ -34,5 +35,10 @@ class GradesPage extends React.Component{
     }
 }
 
+let fetchFromGlobalStore = (globalStore) => {
+    return {
+        ...globalStore.ModuleReducer
+    }
+}
 
-export default GradesPage;
+export default connect(fetchFromGlobalStore)(GradesPage);

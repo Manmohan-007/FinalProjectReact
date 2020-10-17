@@ -55,8 +55,6 @@ class Login extends React.Component {
                         alert("Invalid Credentials");
                     }
 
-
-
                 }
 
             });

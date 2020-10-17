@@ -3,14 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1a38efeb-be0c-438e-83a8-20ea9e79ea38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/CommonComp/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CommonComp/Header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/CommonComp/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CommonComp/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ModulePlan/ModulePlan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ModulePlan/ModulePlan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ModulePlan/ModulePlan.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ModulePlan/ModulePlan.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/SignUpLogin/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SignUpLogin/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/SignUpLogin/login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SignUpLogin/login.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/SignUpLogin/signUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SignUpLogin/signUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/SignUpLogin/signUp.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SignUpLogin/signUp.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/GradesPage/GradesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/GradesPage/GradesPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/GradesPage/GradesPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/GradesPage/GradesPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/PracticeArena/HomePage/PracticeArenaPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/PracticeArena/HomePage/PracticeArenaPage.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +61,7 @@
       <updated>1602765510362</updated>
       <workItem from="1602765515437" duration="9066000" />
       <workItem from="1602917585332" duration="9732000" />
-      <workItem from="1602938265946" duration="3530000" />
+      <workItem from="1602938265946" duration="5792000" />
     </task>
     <servers />
   </component>

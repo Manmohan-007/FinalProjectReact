@@ -17,11 +17,9 @@ class Header extends React.Component {
         console.log(document.querySelector(".ddown").style.display);
         if (document.querySelector(".ddown").style.display === "block") {
             document.querySelector(".ddown").style.display = "";
-
         }
         else if (document.querySelector(".ddown").style.display === "") {
             document.querySelector(".ddown").style.display = "block";
-
         }
     }
 
