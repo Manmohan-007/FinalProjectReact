@@ -11,6 +11,7 @@ class PracticeArenaPage extends Component {
     render() {
         return (
             <>
+                {window.scrollTo(0,0)}
                 <div className={classes.MainWrapper}>
                     <div className={classes.MiddleWrapper}>
                         <p className={classes.Heading1}>Practice Arena</p>
@@ -34,9 +35,9 @@ class PracticeArenaPage extends Component {
 
 const getData = (globalStore)=>{
     return{
-        login: globalStore.loginPage,
-        signup: globalStore.signupPage,
-        loginStatus: globalStore.loginStatus
+        login: globalStore.mainReducer.loginPage,
+        signup: globalStore.mainReducer.signupPage,
+        loginStatus: globalStore.mainReducer.loginStatus
     }
 }
 

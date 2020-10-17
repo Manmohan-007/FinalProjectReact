@@ -67,9 +67,9 @@ class Header extends React.Component {
 
 const getData = (globalStore)=>{
     return{
-        login: globalStore.loginPage,
-        signup: globalStore.signupPage,
-        loginStatus: globalStore.loginStatus
+        login: globalStore.mainReducer.loginPage,
+        signup: globalStore.mainReducer.signupPage,
+        loginStatus: globalStore.mainReducer.loginStatus
     }
 }
 

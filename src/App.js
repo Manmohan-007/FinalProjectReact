@@ -58,7 +58,7 @@ class App extends React.Component {
             <Switch>
                 <Route exact path="/" component={PracticeArenaPage}/>
                 <Route exact path="/topics/:id" component={TopicList} />
-                <Route exact path="/topics/probs" component={Problems} />
+                <Route exact path="/topic/pro/:proId/:title" component={Problems} />
                 <Route exact path="/classroom" component={ClassroomPage} />
                 <Route exact path="/classroom/modules/:id" render={(responseProps) => {
                   return <ProgramDetailsPage modulesNo="6" weeks="20" name="RB-020420 - React Developer Program" batchNo="RB020420" {...responseProps} />
@@ -80,8 +80,8 @@ class App extends React.Component {
 
 const getData = (globalStore)=>{
   return{
-    login: globalStore.loginPage,
-    signup: globalStore.signupPage
+    login: globalStore.mainReducer.loginPage,
+    signup: globalStore.mainReducer.signupPage
   }
 }
 

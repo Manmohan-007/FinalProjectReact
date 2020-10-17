@@ -3,7 +3,14 @@ import { Link } from "react-router-dom"
 import classes from "./Problems.module.css"
 class Problems extends Component {
     render() {
-        const CardData = JSON.parse(localStorage.getItem("finalProjectData")).problems;
+        const mainData = JSON.parse(localStorage.getItem("finalProjectData"))
+        const CardData = mainData.problems;
+        let titleUpdateData ;
+        mainData.arenaPage.map(item=>{
+            if(item.id == this.props.match.params.proId){
+                titleUpdateData = item
+            }
+        })
         console.log(CardData);
 
         const MappedData = CardData.map(item => {
@@ -32,9 +39,10 @@ class Problems extends Component {
 
         return (
             <div className={classes.Container}>
+                {window.scrollTo(0,0)}
                 {/* If user is coming form module's weekly curriculum then header will have weeks and days extra*/}
-                <Link className={classes.Header} to="#">Python &gt; </Link>
-                <Link className={classes.Header} to="/courses/PYTHON/1/">Operators and Conditional Statements  &gt;</Link>
+                <Link className={classes.Header} to="#">{titleUpdateData.title} &gt; </Link>
+                <Link className={classes.Header} to="/courses/PYTHON/1/">{this.props.match.params.title}  &gt;</Link>
                 <div className={classes.Title}>
 
                     <h2>Problems</h2>

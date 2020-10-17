@@ -4,38 +4,43 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {createStore, combineReducers} from 'redux';
+import MainReducer from './Reducers/mainReducer';
 
-const inititalState = {
-  signupPage: false,
-  loginPage: false,
-  loginStatus: checkLoginStatus()
-}
+// const inititalState = {
+//   signupPage: false,
+//   loginPage: false,
+//   loginStatus: checkLoginStatus()
+// }
 
-function checkLoginStatus(){
-  if(window.localStorage.getItem("FinalLoginStatus") == null){
-    window.localStorage.setItem("FinalLoginStatus", false)
-    return "false"
-  }
-  else {
-    return window.localStorage.getItem("FinalLoginStatus")
-  }
-}
+// function checkLoginStatus(){
+//   if(window.localStorage.getItem("FinalLoginStatus") == null){
+//     window.localStorage.setItem("FinalLoginStatus", false)
+//     return "false"
+//   }
+//   else {
+//     return window.localStorage.getItem("FinalLoginStatus")
+//   }
+// }
 
-const mainReducer = (state = inititalState, action)=>{
-  switch(action.type){
-    case "changeSignupStatus":
-      return {...state, signupPage: true, loginPage: false}
-    case "changeLoginStatus":
-      return {...state, loginPage: true, signupPage: false}
-    case "layerChangeStatus": 
-      return {...state, loginPage: false, signupPage: false}
-    default:
-      return {...state}
-  } 
-}
+// const mainReducer = (state = inititalState, action)=>{
+//   switch(action.type){
+//     case "changeSignupStatus":
+//       return {...state, signupPage: true, loginPage: false}
+//     case "changeLoginStatus":
+//       return {...state, loginPage: true, signupPage: false}
+//     case "layerChangeStatus": 
+//       return {...state, loginPage: false, signupPage: false}
+//     default:
+//       return {...state}
+//   } 
+// }
 
-const globalStore = createStore(mainReducer)
+const rootReducer = combineReducers({
+    mainReducer: MainReducer
+})
+
+const globalStore = createStore(rootReducer)
 
 ReactDOM.render(
   <React.StrictMode>

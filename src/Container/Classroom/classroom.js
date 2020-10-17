@@ -14,6 +14,7 @@ class classRoom extends React.Component{
         })
         return(
             <div className={classes.mainWrapper}>
+                {window.scrollTo(0,0)}
                 <div className={classes.classRoomPage}>
                     <h2 className={classes.heading}>Classroom</h2>
                     <p className={classes.text}>Your Enrolled Courses</p>
