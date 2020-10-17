@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from './grades.module.css';
-import VideoPlayer from '../../Components/VideoPlayer/video'
+import classes from './GradesPage.module.css';
+// import VideoPlayer from '../../Components/VideoPlayer/video'
 
-class grades extends React.Component{
+class GradesPage extends React.Component{
     render(){
         return(
             <div className={classes.mainWrapper}>
@@ -35,4 +35,4 @@ class grades extends React.Component{
 }
 
 
-export default grades;
+export default GradesPage;

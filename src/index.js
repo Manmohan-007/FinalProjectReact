@@ -5,7 +5,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
-import MainReducer from './Reducers/mainReducer';
+import LoginSignUpReducer from './Reducers/LoginSignUpReducer';
+import { ActiveModule } from "./Reducers/ActiveModuleReducer";
 
 // const inititalState = {
 //   signupPage: false,
@@ -23,7 +24,7 @@ import MainReducer from './Reducers/mainReducer';
 //   }
 // }
 
-// const mainReducer = (state = inititalState, action)=>{
+// const loginSignUpReducer = (state = inititalState, action)=>{
 //   switch(action.type){
 //     case "changeSignupStatus":
 //       return {...state, signupPage: true, loginPage: false}
@@ -37,7 +38,8 @@ import MainReducer from './Reducers/mainReducer';
 // }
 
 const rootReducer = combineReducers({
-    mainReducer: MainReducer
+    mainReducer: LoginSignUpReducer,
+    ModuleReducer: ActiveModule
 })
 
 const globalStore = createStore(rootReducer)
