@@ -98,8 +98,6 @@ margin-left: 20px;
     border-color: rgb(0, 0, 0);
     position: absolute;
     transform: translate3d(-50px, 28px, 0px);
-    top: 0px;
-    left: 0px;
     will-change: transform;
     float: left;
     min-width: 10rem;
@@ -114,8 +112,8 @@ margin-left: 20px;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: .25rem; 
     z-index: 1000;
-
-
+    top: 0;
+    right: -100%;
 } 
 .DropdownItem{
     display: block;

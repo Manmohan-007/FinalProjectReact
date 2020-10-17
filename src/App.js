@@ -65,7 +65,7 @@ class App extends React.Component {
           <Switch>
             <Hoc data={window.localStorage.getItem("finalProjectData")}>
               <Route exact path="/" component={PracticeArenaPage} />
-              <Route exact path="/topics" component={TopicList} />
+              <Route exact path="/topics/:id" component={TopicList} />
               <Route exact path="/topics/problems" component={Problems} />
               <Route exact path="/classroom" component={ClassroomPage} />
               <Route exact path="/classroom/modules/:id" render={(responseProps) => {

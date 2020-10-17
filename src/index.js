@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
 import LoginSignUpReducer from './Reducers/LoginSignUpReducer';
 import { ActiveModule } from "./Reducers/ActiveModuleReducer";
+import { UserDetails} from "./Reducers/UserDetails";
 
 // const inititalState = {
 //   signupPage: false,
@@ -39,7 +40,8 @@ import { ActiveModule } from "./Reducers/ActiveModuleReducer";
 
 const rootReducer = combineReducers({
     mainReducer: LoginSignUpReducer,
-    ModuleReducer: ActiveModule
+    ModuleReducer: ActiveModule,
+    UserReducer: UserDetails
 })
 
 const globalStore = createStore(rootReducer)
