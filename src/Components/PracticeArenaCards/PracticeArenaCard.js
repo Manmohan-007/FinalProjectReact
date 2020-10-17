@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 class PracticeArenaCard extends Component {
 
     cardsOnClick(props) {
-        if (props.loginStatus == "false") {
+        if (props.loginStatus == false) {
             props.updateSignUpStatus()
         }
     }
