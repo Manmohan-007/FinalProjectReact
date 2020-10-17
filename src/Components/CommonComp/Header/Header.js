@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 class Header extends React.Component {
 
     classUpdate(props) {
-        if (props.loginStatus == "false") {
+        if (props.loginStatus == false) {
             props.updateSignUpStatus()
         }
         else
