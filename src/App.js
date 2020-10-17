@@ -14,7 +14,7 @@ import SessionPlan from "./Container/SessionPlan/SessionPlan";
 import Hoc from './Components/Hoc/hoc';
 import axios from 'axios';
 import VideoPlayer from './Components/VideoPlayer/video';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 
 class App extends React.Component {
@@ -24,8 +24,8 @@ class App extends React.Component {
     loginStatus: this.checkLoginStatus()
   }
 
-  checkLoginStatus(){
-    if(window.localStorage.getItem("FinalLoginStatus") == null){
+  checkLoginStatus() {
+    if (window.localStorage.getItem("FinalLoginStatus") == null) {
       window.localStorage.setItem("FinalLoginStatus", false)
       return "false"
     }
@@ -33,6 +33,11 @@ class App extends React.Component {
       return window.localStorage.getItem("FinalLoginStatus")
     }
   }
+
+
+
+
+
 
   componentDidMount() {
     if (this.state.isPresent === false) {
@@ -49,14 +54,19 @@ class App extends React.Component {
   }
 
   render() {
+
+
+
+
+
     return (
       <>
-      <BrowserRouter>
-        <div className="App">
-          <Route path="/" component={Header}></Route>
-          <Hoc data={window.localStorage.getItem("finalProjectData")}>
-            <Switch>
-                <Route exact path="/" component={PracticeArenaPage}/>
+        <BrowserRouter>
+          <div className="App">
+            <Route path="/" component={Header}></Route>
+            <Hoc data={window.localStorage.getItem("finalProjectData")}>
+              <Switch>
+                <Route exact path="/" component={PracticeArenaPage} />
                 <Route exact path="/topics/:id" component={TopicList} />
                 <Route exact path="/topic/pro/:proId/:title" component={Problems} />
                 <Route exact path="/classroom" component={ClassroomPage} />
@@ -66,20 +76,20 @@ class App extends React.Component {
                 <Route exact path="/classroom/module/grades" component={GradesPage} />
                 <Route exact path={"/classroom/module/units"} component={UnitsPage} />
                 <Route exact path={"/classroom/module/session_plan"} component={SessionPlan} />
-                <Route exact path={"/classroom/module/session_video/:vimeoId"} component={VideoPlayer}/>
-            </Switch>
-          </Hoc>
-          <Footer />
-        </div>
-      </BrowserRouter>
+                <Route exact path={"/classroom/module/session_video/:vimeoId"} component={VideoPlayer} />
+              </Switch>
+            </Hoc>
+            <Footer />
+          </div>
+        </BrowserRouter>
       </>
     );
   }
 }
 
 
-const getData = (globalStore)=>{
-  return{
+const getData = (globalStore) => {
+  return {
     login: globalStore.mainReducer.loginPage,
     signup: globalStore.mainReducer.signupPage
   }

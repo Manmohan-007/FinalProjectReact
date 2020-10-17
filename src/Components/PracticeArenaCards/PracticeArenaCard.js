@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import classes from "./PracticeArenaCard.module.css";
 import { Link } from "react-router-dom";
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 
 class PracticeArenaCard extends Component {
 
-    cardsOnClick(props){
-        if(props.loginStatus == "false"){
+    cardsOnClick(props) {
+        if (props.loginStatus == "false") {
             props.updateSignUpStatus()
         }
     }
@@ -16,8 +16,8 @@ class PracticeArenaCard extends Component {
         const CardData = JSON.parse(localStorage.getItem("finalProjectData")).arenaPage;
         const MappedData = CardData.map(item => {
             return (
-                <Link to={this.props.loginStatus=="true"?`/topics/${item.id}`: '/'}>
-                    <div onClick={()=>this.cardsOnClick(this.props)} className={classes.Card}>
+                <Link to={this.props.loginStatus == true ? `/topics/${item.id}` : '/'}>
+                    <div onClick={() => this.cardsOnClick(this.props)} className={classes.Card}>
                         <div className={classes.CardContent} style={{ padding: "0 0 0 10px" }}>
                             <div className={classes.Thumbnail}>
                                 <img src={item.logo} alt="edyoda_img" />
@@ -46,21 +46,21 @@ class PracticeArenaCard extends Component {
 }
 
 
-const getData = (globalStore)=>{
-    return{
+const getData = (globalStore) => {
+    return {
         login: globalStore.mainReducer.loginPage,
         signup: globalStore.mainReducer.signupPage,
-        loginStatus: globalStore.mainReducer.loginStatus
+        loginStatus: globalStore.mainReducer.IsUserLoggedIn
     }
 }
 
-const changeData = (dispatch)=>{
-    return{
-        updateSignUpStatus:()=>{
-            return dispatch({type: "changeSignupStatus"})
+const changeData = (dispatch) => {
+    return {
+        updateSignUpStatus: () => {
+            return dispatch({ type: "changeSignupStatus" })
         }
     }
 }
-  
 
-export default connect(getData,changeData)(PracticeArenaCard)
+
+export default connect(getData, changeData)(PracticeArenaCard)

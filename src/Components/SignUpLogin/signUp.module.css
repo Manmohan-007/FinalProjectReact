@@ -90,4 +90,12 @@
     font-weight: 500;
     cursor: pointer;
     border-radius: 6px;
+} 
+
+.loginVal,
+.passVal {
+  display: none;
+  font-size: 0.9em;
+  text-align: left;
+  color: #e15d44;
 }
