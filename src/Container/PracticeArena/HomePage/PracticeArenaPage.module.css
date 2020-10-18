@@ -1,7 +1,5 @@
 .MainWrapper {
-
     margin: 0 14%;
-
 } 
 .Heading1{
     font-size: 40px;
@@ -23,14 +21,23 @@
     font-family: 'Raleway', sans-serif;
 
 } 
-.CardsWrapper{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px 0;
-} 
-.CardsWrapper > a{
-    width :  calc(25% - 10px);
-    margin: 5px ;
+/*.CardsWrapper{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    margin: 20px 0;*/
+/*} */
+/*.CardsWrapper > a{*/
+/*    width :  24%;*/
+/*    margin: 5px;*/
+/*}*/
+
+.CardsWrapper {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    justify-content: space-between;
+    grid-row-gap: 6%;
+    height: fit-content;
+    padding: 0 0 24px 0;
 }
 * {
     box-sizing: border-box;

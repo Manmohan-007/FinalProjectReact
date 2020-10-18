@@ -65,7 +65,19 @@ margin-right: 20px;
     width: 20px !important;
     height: 45px !important;
 
-} 
+}
+.IconWrapper:hover .Badge {
+    animation-name: notificationCount;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;
+    transition: transform 400ms ease;
+}
+
+.IconWrapper:hover svg {
+    animation-name: notificationBell;
+    animation-duration: 150ms;
+    animation-iteration-count: infinite;
+}
 .Badge{
     display: inline-block;
     padding: .25em .4em;
@@ -78,11 +90,11 @@ margin-right: 20px;
     border-radius: .25rem; 
     min-width: 10px; 
     position: absolute;
-    top: 3px;
-    right: -12px; 
+    top: 2px;
+    right: -8px;
     color: #fff;
     background-color: #dc3545;
-
+    transform: scale(0.9);
 } 
 .DropdownContent{
     position: relative;
@@ -94,10 +106,11 @@ margin-right: 20px;
 
 } 
 .UserName > svg  {
-margin-left: 20px;
-
+    margin-left: 20px;
 } 
-
+.UserName:hover {
+    border-bottom: 1px solid rgba(195,195,195,0.7);
+}
 
 .DropdownContainer{
     display: none;
@@ -177,4 +190,28 @@ margin-left: 20px;
 }
 .signUpInactive{
     display: none;
+}
+
+@keyframes notificationBell {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes notificationCount {
+    80% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
 }

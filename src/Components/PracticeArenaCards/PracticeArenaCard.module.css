@@ -3,35 +3,50 @@
     background: #FFFFFF;
     padding: 10px 20px;
     width: 100% ; 
-    border-radius: 10px;
-    box-shadow: 0 0 2px 1px #0096ff;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(195,195,195, 1);
     color: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     font-family: 'Raleway', sans-serif;
-    height: 15vh; 
- 
+    height: 15vh;
+    justify-content: space-between;
+}
 
+.Card:hover {
+    box-shadow: 0 0 6px #0095FF;
 }
 
 .courseName{
-    font-weight: 500;
-    font-size: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 22px;
     margin: 0;
-    letter-spacing: 1px;
+    letter-spacing: 0.6px;
+    height: 70%;
+    overflow: hidden;
 
 } 
 .units{
+    position: absolute;
+    bottom: 16px;
+    left: 0;
     font-style: italic;
-    margin-top: 18px;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     color: rgba(0,0,0,0.6);
 
 } 
 .CardContent {
-    width: 50%;
+    width: 60%;
+    height: 100%;
+    padding: 12px 0;
+    position: relative;
+}
 
+.CardImage {
+    width: 40%;
 }
 .Thumbnail > img{
     width: 65px;
