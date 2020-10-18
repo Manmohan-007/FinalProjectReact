@@ -51,7 +51,6 @@
     font-weight: 600;
 } 
 .Hamburger{
-    display: none ;
     width: 25%;
     text-align: right;
 
@@ -226,13 +225,14 @@ display: none ;
 }
 
 
-@media(max-width:968px){ 
-  
-.loginButtonRes ,.signButtonRes {
-display: block ; 
+@media(max-width:968px) {
 
-}
-    .MainWrapper{
+    .loginButtonRes, .signButtonRes {
+        display: block;
+
+    }
+
+    .MainWrapper {
         width: 100%;
         height: 65px;
         z-index: 90;
@@ -252,55 +252,64 @@ display: block ;
         font-weight: 400;
         line-height: 1.5;
         font-family: 'Open Sans', sans-serif;
-    
-    } 
-    .LogoLink >img{
-        width: 180px;
-    height: 37px;
 
     }
-    .rightLoginWrapper{
-        display: flex;
-        width: 80%;
+
+    .LogoLink > img {
+        width: 180px;
+        height: 37px;
+
     }
+
+    .rightLoginWrapper {
+        display: flex;
+    }
+
     .RightSideWrapper {
         display: none;
-    } 
+    }
+
     .RightSideWrapper1 {
-        display: block ; 
+        display: block;
         width: 100%;
     }
-   
-    .loginButton{
+
+    .loginButton {
         color: #3194FF;
         font-size: 14px;
         margin: 0;
-        cursor: pointer; 
-    } 
-    .signButton{
-        border-radius: 50px;
-        background: linear-gradient(269deg,#0048ff,#0096ff);
+        cursor: pointer;
+    }
+
+    .signButton {
+        /*border-radius: 50px;*/
+        background: linear-gradient(269deg, #0048ff, #0096ff);
         color: #fff;
-        padding: 4% 4.9%;
+        /*padding: 4% 4.9%;*/
         outline: none;
         border: none;
         font-size: 12px;
-        margin-left: 20px;
+        margin: 0 20px;
         text-transform: capitalize;
         cursor: pointer;
     }
-    .Hamburger{
-        display: block ; 
-        } 
-    .NotificationWrapper {
-        display: none;
-    }     
-    .UserName{
-        display: block;
-    } 
-    .UserNameres{
+
+    .Hamburger {
         display: block;
     }
+
+    .NotificationWrapper {
+        display: none;
+    }
+
+    .UserName {
+        display: block;
+    }
+
+    .UserNameres {
+        display: block;
+    }
+
     /*.LeftSide {*/
     /*    display: flex;*/
     /*    justify-content:space-between*/
@@ -309,7 +318,7 @@ display: block ;
     /*    align-items: center;*/
     /*    text-transform: capitalize;*/
     /*} */
-    .DropdownContainer{
+    .DropdownContainer {
         display: none;
         box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;
         border-color: rgb(0, 0, 0);
@@ -328,10 +337,11 @@ display: block ;
         list-style: none;
         background-color: #fff;
         background-clip: padding-box;
-        border: 1px solid rgba(0,0,0,.15);
+        border: 1px solid rgba(0, 0, 0, .15);
         border-radius: .25rem;
         z-index: 1000;
-    } 
+    }
+
     .DropdownItem {
         display: block;
         width: 100%;
@@ -343,7 +353,7 @@ display: block ;
         white-space: nowrap;
         background-color: transparent;
         border: 0;
-}
+    }
 
     .LeftSide {
         width: 30%;
@@ -361,6 +371,7 @@ display: block ;
         animation-duration: 1s;
         transition: left 400ms ease; */
     }
+
     .Slide {
         animation-name: SlideInAnimation;
         animation-duration: 1s;
@@ -375,66 +386,63 @@ display: block ;
         border-bottom: 1px solid rgba(195, 195, 195, 0.7);
         margin: 8px 0;
     }
-    .ContentWrapper:first-child, .ContentWrapper:last-child {
-        margin: 0;
-    } 
 
-    /* {Manmohan} */ 
-    .DropdownContainerRes{
-      display: none;
-      flex-direction: column;
-
-    } 
-
-
-
-    .DropdownContentRes{
-    text-align: left;
-
+    .ContentWrapper:first-child {
+        margin-top: 0;
     }
 
-    .UserNameRes{
-        width: 100%;
-        display: block;
+    .ContentWrapper:last-child {
+        margin-bottom: 0;
+    }
+
+    /* {Manmohan} */
+    .DropdownContainerRes {
+        display: none;
+        flex-direction: column;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+
+    .DropdownContentRes {
         text-align: left;
+    }
+
+    .UserNameRes {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
         padding: 3px 0;
         box-sizing: border-box;
         border-bottom: 1px solid rgba(195, 195, 195, 0.7);
-        margin: 8px 0; 
+        margin: 8px 0;
         cursor: pointer;
         font-size: 18px;
         font-weight: 600;
-
-
     }
-    .UserNameRes > svg{
-      margin-left: 10px;
 
-    }
-    .LeftSide{
+    .LeftSide {
         display: none;
-    } 
-    .overlay{
-    width: 100%;
-    height: 100%;
-    display: none;
-    position: fixed; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 9;
-    margin: 0;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9;
+        margin: 0;
+        top: 0;
 
     }
 
-
-
-
-
-
-
-
-
-
-
+    .DropdownContainerRes > a {
+        font-weight: 500;
+        font-size: 14px;
+        border-bottom: 1px solid rgba(195, 195, 195, 0.7);
+        width: 100%;
+    }
 
 }
 
