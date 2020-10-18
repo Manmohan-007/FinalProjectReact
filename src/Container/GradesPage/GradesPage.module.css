@@ -19,6 +19,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .subjectLogo{
     width: 20%;
     box-sizing: border-box;
@@ -26,6 +27,8 @@
 .detailsWrapper{
     width: 75%;
     box-sizing: border-box;
+    border-left: 1px solid rgba(195, 195, 195, 0.3);
+    padding-left: 8%;
 
 }
 .title{
@@ -38,12 +41,10 @@
 }
 .marksWrapper{
     display: flex;
-    width: 230px;
     box-sizing: border-box;
-    justify-content: space-between;
 }
 .gradesDiv{
-    width:  fit-content;
+    width: 25%;
     height: fit-content;
 }
 .marks{
@@ -64,4 +65,24 @@
     letter-spacing: 0.5px;
     margin-bottom: 40px;
     color: #4C4C4C;
+}
+
+@media (max-width: 968px) {
+    .mainWrapper {
+        margin: 2% 8%;
+        padding: 4% 8%;
+        box-sizing: border-box;
+    }
+
+    .gradesDiv {
+        width: 25%;
+    }
+
+    .marks {
+        margin: 6px 0;
+    }
+
+    .title {
+        font-size: 18px;
+    }
 }

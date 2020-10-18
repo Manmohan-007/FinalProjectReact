@@ -134,13 +134,13 @@
 }
 
 @media (max-width: 968px){
-    .card{
-        width: calc(260px - 20px);
-        height: 260px;
-        margin: 6px 6px;
+
+    .card {
+        height: fit-content;
     }
+
     .cardImageWrapper{
-        height: 160px;
+        height: 120px;
     }
     .descWrapper{
         padding: 12px;
@@ -151,11 +151,6 @@
 }
 
 @media (max-width: 600px){
-    .card{
-        width: calc(260px - 16px);
-        height: 260px;
-        margin: 6px 6px;
-    }
     .cardImageWrapper{
         height: 160px;
     }

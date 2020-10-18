@@ -42,7 +42,7 @@ class Problems extends Component {
                 {/* If user is coming form module's weekly curriculum then header will have weeks and days extra*/}
                 <Link className={classes.Header} to="#">{titleUpdateData.title} &gt; </Link>
                 <Link className={classes.Header} to="/courses/PYTHON/1/">{this.props.match.params.title}  &gt;</Link>
-                <div className={classes.Title}>
+                <div>
 
                     <h2>Problems</h2>
 

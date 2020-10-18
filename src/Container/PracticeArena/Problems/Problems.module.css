@@ -14,21 +14,7 @@
 .Header:hover {
     color: #007bff;
 
-} 
-.Title{
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px; 
-    justify-content: space-between; 
-    flex: 0 0 83.333333%;
-    max-width: 83.333333%; 
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px; 
-    margin-bottom : -18px ; 
-} 
+}
 .Title > h2{
     margin-top: 1rem; 
     font-weight: bold; 
@@ -36,7 +22,7 @@
 } 
 .Topic{
     font-family: 'Roboto', sans-serif;
-    margin: 1.5rem;
+    margin: 1rem 0;
     border-radius: 5px;
     border: 2px solid #0095FF;
     color: black;
@@ -44,6 +30,7 @@
     align-items: center; 
     line-height: 1.5;
     box-shadow: 0 0 24px rgba(192, 195, 195, 0.7);
+    height: 7vh;
 }
 
 .Topic:hover {
@@ -52,13 +39,13 @@
 }
 .Easy{
     background-color: #0095FF;
-    padding: 1rem;
+    height: 100%;
     color: white;
     font-weight: bold;
     font-style: italic;
 }
 .Topic > span {
-    width: 10vw;
+    width: 12%;
 } 
 .EasyBorder{
     border: 2px solid #0095FF!important; 
@@ -68,7 +55,6 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding-right: 10px;
 
 } 
 .ProblemTitle{
@@ -79,22 +65,39 @@
 .ProblemDifficulty{
     font-family: "Roboto" , sans-serif;
     font-style: italic;
-    padding-left: 1rem;
-    padding-top: 1rem;
-} 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Status:hover {
+    color: #fff;
+    background-color: rgba(0, 155, 250, 1);
+    border-color: transparent;
+    border-radius: 2px;
+    box-shadow: 0 0 12px rgba(0, 155, 250, 0.7);
+}
+
 .Status{
     padding: 1px 5px;
+    margin-right: 12px;
     width: auto;
     border: 2px solid #007bff;
     color: #007bff;
 } 
 .Medium{
     background-color: #8455FC;
-    padding: 1rem;
     color: white;
     font-weight: bold;
     font-style: italic;
-} 
+}
+
+.Easy, .Medium {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
 .MediumBorder{
     border: 2px solid #8455FC;
 }
@@ -105,9 +108,46 @@
         margin: 8% 2%;
     }
 
+    .Header {
+        font-size: 14px;
+    }
+
     .ProblemTitle {
         margin: 0;
         padding: 0;
         width: 100%;
+    }
+
+    .Easy, .Medium {
+
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .ProblemDetails {
+        align-items: center;
+        margin-left: 12px;
+    }
+
+    .ProblemTitle {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    .Status {
+        font-size: 10px;
+        font-weight: 500;
+        border-width: 1px;
+        border-radius: 4px;
+        padding: 2px 8px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .Easy, .Medium {
+        padding: 0 4px;
+        text-align: center;
     }
 }
