@@ -132,3 +132,67 @@
     box-sizing: border-box;
     display: flex;
 }
+
+@media(max-width: 968px){
+    .programs{
+        width: 93%;
+        padding-bottom: 80px;
+    }
+    .singleEdy{
+        font-size: 30px;
+    }
+    .singlePro{
+        font-size: 22px;
+    }
+    .wrapperDiv{
+        left: 30px;
+    }
+    .number{
+        margin-bottom: 3px;
+    }
+    .cardDetailWrapper{
+        left: 30px;
+    }
+    .subject{
+        font-size: 25px;
+    }
+    .batch{
+        font-size: 16px;
+    }
+    .allWrapper{
+        padding-left: 30px;
+    }
+    .modulesWrapper{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media(max-width: 600px){
+    .programs{
+        width: 93%;
+        padding-bottom: 80px;
+    }
+    .wrapperDiv{
+        left: 30px;
+    }
+    .number{
+        margin-bottom: 3px;
+    }
+    .cardDetailWrapper{
+        left: 30px;
+    }
+    .subject{
+        font-size: 25px;
+        line-height: 30px;
+        bottom: 10px;
+    }
+    .batch{
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+    .allWrapper{
+        padding-left: 30px;
+    }
+}

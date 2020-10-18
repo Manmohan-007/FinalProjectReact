@@ -48,3 +48,11 @@
     font-weight: 600;
 }
 
+@media(max-width: 600px){
+    .cardWrapper{
+        width: calc(200px );
+        /* height: 250px; */
+        margin: 8px 8px;
+    }
+}
+

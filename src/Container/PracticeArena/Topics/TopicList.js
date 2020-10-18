@@ -18,7 +18,7 @@ class TopicList extends Component {
                 <div className={classes.AssignmentStatusCard}>
                     <div className={classes.AssignmenDetails}>
                         <div className={classes.AssNumName}>
-                            <Link to={`/topic/pro/${this.props.match.params.id}/${item.title}`}>
+                            <Link to={`/topic/problems/${this.props.match.params.id}/${item.title}`}>
                                 <span className={classes.AssNum}>{item.id}). </span>
                                 <span className={classes.AssName}>{item.title}</span>
                             </Link>
