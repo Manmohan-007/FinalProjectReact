@@ -1,7 +1,6 @@
 let inititalState = {
   signupPage: false,
   loginPage: false,
-
   IsUserLoggedIn: localStorage["IsUserLoggedIn"] == "true"
 }
 

@@ -5,9 +5,8 @@ import { connect } from 'react-redux';
 
 class Header extends React.Component {
 
-
     classUpdate(props) {
-        if (props.loginStatus == "false") {
+        if (props.loginStatus == false) {
             props.updateSignUpStatus()
         }
         else
@@ -18,19 +17,13 @@ class Header extends React.Component {
         console.log(document.querySelector(".ddown").style.display);
         if (document.querySelector(".ddown").style.display === "block") {
             document.querySelector(".ddown").style.display = "";
-
         }
         else if (document.querySelector(".ddown").style.display === "") {
             document.querySelector(".ddown").style.display = "block";
-
         }
-
     }
 
-
     render() {
-
-
 
         return (
             <>
@@ -49,6 +42,9 @@ class Header extends React.Component {
                         </div>
                     </div>
 
+
+
+
                     <div className={this.props.loginStatus == true ? classes.RightSideWrapper : classes.displayBlockUser}>
                         <div className={classes.NotificationWrapper}>
                             <div className={classes.IconWrapper}>
@@ -60,8 +56,11 @@ class Header extends React.Component {
 
                         <div className={classes.DropdownContent}>
                             <Link className={classes.UserName} to="#" onClick={this.handleUserClick} >
-                                {/* {this.state.Userdata} */}
+                                {this.props.loginStatus ? this.props.userName : null}
                                 <i class="fas fa-caret-down"></i>
+                                {
+                                    console.log(this.props.userName)
+                                }
                             </Link>
                             <div className={`${classes.DropdownContainer} ddown`} >
                                 <Link className={classes.DropdownItem} to="#">Profile</Link>
@@ -87,7 +86,8 @@ const getData = (globalStore) => {
     return {
         login: globalStore.mainReducer.loginPage,
         signup: globalStore.mainReducer.signupPage,
-        loginStatus: globalStore.mainReducer.IsUserLoggedIn
+        loginStatus: globalStore.mainReducer.IsUserLoggedIn,
+        userName: globalStore.UserReducer.username
     }
 }
 

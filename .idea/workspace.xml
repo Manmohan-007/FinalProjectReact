@@ -3,26 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1a38efeb-be0c-438e-83a8-20ea9e79ea38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Curriculam/curriculam.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Curriculam/curriculam.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ModulePlan/ModulePlan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ModulePlan/ModulePlan.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Modules/Modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Modules/Modules.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Modules/Modules.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Modules/Modules.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PlanDetails/PLanDetails.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PlanDetails/PLanDetails.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PlanDetails/PlanDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PlanDetails/PlanDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/UnitsModule/UnitsModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UnitsModule/UnitsModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/VideoPlayer/video.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/VideoPlayer/video.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/cards/card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/cards/card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/moduleCard/moduleCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/moduleCard/moduleCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/GradesPage/grades.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/GradesPage/grades.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/SessionPlan/SessionPlan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/SessionPlan/SessionPlan.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/UnitsPage/UnitsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/UnitsPage/UnitsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/UnitsPage/UnitsPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/UnitsPage/UnitsPage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reducers/mainReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/LoginSignUpReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CommonComp/Footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CommonComp/Footer/Footer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CommonComp/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CommonComp/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PracticeArenaCards/PracticeArenaCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PracticeArenaCards/PracticeArenaCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PracticeArenaCards/PracticeArenaCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PracticeArenaCards/PracticeArenaCard.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/cards/card.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/cards/card.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/Classroom/classroom.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Classroom/classroom.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/PracticeArena/HomePage/PracticeArenaPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/PracticeArena/HomePage/PracticeArenaPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/PracticeArena/Problems/Problems.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/PracticeArena/Problems/Problems.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +60,9 @@
       <option name="presentableId" value="Default" />
       <updated>1602765510362</updated>
       <workItem from="1602765515437" duration="9066000" />
-      <workItem from="1602917585332" duration="9606000" />
+      <workItem from="1602917585332" duration="9732000" />
+      <workItem from="1602938265946" duration="5792000" />
+      <workItem from="1602946719275" duration="4154000" />
     </task>
     <servers />
   </component>

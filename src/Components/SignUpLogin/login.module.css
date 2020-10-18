@@ -19,7 +19,7 @@
     box-sizing: border-box;
     position: fixed;
 }
-.cancleButton{
+.cancelButton{
     position: absolute;
     top: 4px;
     right: 8px;

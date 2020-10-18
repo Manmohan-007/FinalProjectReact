@@ -7,39 +7,12 @@ import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
 import LoginSignUpReducer from './Reducers/LoginSignUpReducer';
 import { ActiveModule } from "./Reducers/ActiveModuleReducer";
-
-// const inititalState = {
-//   signupPage: false,
-//   loginPage: false,
-//   loginStatus: checkLoginStatus()
-// }
-
-// function checkLoginStatus(){
-//   if(window.localStorage.getItem("FinalLoginStatus") == null){
-//     window.localStorage.setItem("FinalLoginStatus", false)
-//     return "false"
-//   }
-//   else {
-//     return window.localStorage.getItem("FinalLoginStatus")
-//   }
-// }
-
-// const loginSignUpReducer = (state = inititalState, action)=>{
-//   switch(action.type){
-//     case "changeSignupStatus":
-//       return {...state, signupPage: true, loginPage: false}
-//     case "changeLoginStatus":
-//       return {...state, loginPage: true, signupPage: false}
-//     case "layerChangeStatus": 
-//       return {...state, loginPage: false, signupPage: false}
-//     default:
-//       return {...state}
-//   } 
-// }
+import { UserDetails} from "./Reducers/UserDetails";
 
 const rootReducer = combineReducers({
     mainReducer: LoginSignUpReducer,
-    ModuleReducer: ActiveModule
+    ModuleReducer: ActiveModule,
+    UserReducer: UserDetails
 })
 
 const globalStore = createStore(rootReducer)

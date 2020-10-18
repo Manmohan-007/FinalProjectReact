@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 class PracticeArenaCard extends Component {
 
     cardsOnClick(props) {
-        if (props.loginStatus == "false") {
+        if (props.loginStatus == false) {
             props.updateSignUpStatus()
         }
     }
@@ -18,7 +18,7 @@ class PracticeArenaCard extends Component {
             return (
                 <Link to={this.props.loginStatus == true ? `/topics/${item.id}` : '/'}>
                     <div onClick={() => this.cardsOnClick(this.props)} className={classes.Card}>
-                        <div className={classes.CardContent} style={{ padding: "0 0 0 10px" }}>
+                        <div className={classes.CardImage}>
                             <div className={classes.Thumbnail}>
                                 <img src={item.logo} alt="edyoda_img" />
                             </div>

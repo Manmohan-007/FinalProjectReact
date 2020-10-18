@@ -43,7 +43,11 @@
     color: white; 
     background-color: transparent ;
 
-} 
+}
+
+.Content:hover {
+    text-decoration: underline;
+}
 .ItemIcon{
     margin: 5px 0 5px 0;
     margin-bottom: 5px;

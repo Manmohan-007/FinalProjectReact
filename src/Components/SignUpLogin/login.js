@@ -32,7 +32,6 @@ class Login extends React.Component {
             UserName: this.state.UserName,
             Password: this.state.Password,
         };
-
         localStorage.setItem("UserData", JSON.stringify(obj));
     };
 
@@ -41,6 +40,7 @@ class Login extends React.Component {
         axios
             .get("https://5ee248998b27f3001609487e.mockapi.io/EdyodaUsers")
             .then((response) => {
+
                 if (response.status == 200) {
 
                     this.checker(response.data);
@@ -49,13 +49,11 @@ class Login extends React.Component {
                         this.props.UserLoggedIn();
                         this.props.layerChangeStatus();
 
-
+                        // this.props.UpdateUserName(response.userName)
                         alert("Login Successful");
                     } else {
                         alert("Invalid Credentials");
                     }
-
-
 
                 }
 
@@ -80,7 +78,7 @@ class Login extends React.Component {
                 <div onClick={() => this.props.layerChangeStatus()} className={classes.layerWrapper}>
                 </div>
                 <div className={classes.signUpWrapper}>
-                    <span onClick={() => this.props.layerChangeStatus()} className={classes.cancleButton}>x</span>
+                    <span onClick={() => this.props.layerChangeStatus()} className={classes.cancelButton}>x</span>
                     <div className={classes.loginButtonWrapper}>
                         <div className={`${classes.button} ${classes.specialButton}`}>Login</div>
                         <div onClick={this.props.changeSignupStatus} className={classes.button}>Sign Up</div>
@@ -117,7 +115,7 @@ const changeData = (dispatch) => {
         UserLoggedIn: () => {
             dispatch({ type: "USER_LOGGEDIN" });
         },
-
+        UpdateUserName: (data) => dispatch({type: 'UPDATE_USER', data: data})
     }
 }
 

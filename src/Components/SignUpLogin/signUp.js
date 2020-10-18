@@ -205,7 +205,7 @@ class signUp extends React.Component {
                 <div className={`${classes.signUpWrapper}`}>
                     <span onClick={() => {
                         this.props.layerChangeStatus()
-                    }} className={classes.cancleButton}>x</span>
+                    }} className={classes.cancelButton}>x</span>
                     <div className={classes.loginButtonWrapper}>
                         <div onClick={this.props.changeLoginStatus} className={classes.button}>Login</div>
                         <div className={`${classes.button} ${classes.specialButton}`}>Sign Up</div>
