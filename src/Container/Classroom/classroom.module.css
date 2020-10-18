@@ -52,11 +52,13 @@
     }
     .cardsContainer {
         grid-template-columns: 45% 45%;
+        margin: 12px auto;
     }
 }
 .cardsContainer {
     display: grid;
     grid-template-columns: 24% 24% 24% 24%;
     justify-content: space-between;
-    margin: 12px 0;
+    margin: 12px auto;
+
 }

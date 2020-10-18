@@ -27,6 +27,7 @@ class moduleCard extends React.Component{
                 <div onClick={() => this.handleGlobalStateUpdate()}  className={classes.cardWrapper}>
                     <div className={classes.detailWrapper}>
                         <img className={classes.moduleImage} src={this.props.logo} alt="" />
+                        {/*EdYoda Logo Link: https://avatars2.githubusercontent.com/u/22793100?s=400&v=4*/}
                         <p className={classes.title}>{this.props.title}</p>
                     </div>
                     <div className={classes.authorWrapper}>

@@ -24,7 +24,18 @@
     justify-content: center;
     align-items: center;
     text-transform: capitalize;
-} 
+}
+.LeftSide {
+    width: 60%;
+    justify-content: left;
+}
+.RightSideWrapper {
+    width: 25%;
+}
+.LogoWrapper {
+    width: 20%;
+}
+
 .LogoLink > img{
     width: 200px ;  
     height:40px ;  
@@ -37,7 +48,14 @@
     font-weight: 600;
 } 
 .Hamburger{
-display: none ; 
+    display: none ;
+    width: 25%;
+    text-align: right;
+
+}
+
+.Hamburger > img {
+    margin-right: 14px;
 }
 
 .ContentWrapper:hover {
@@ -133,7 +151,7 @@ margin-right: 20px;
     border-radius: .25rem; 
     z-index: 1000;
     top: 0;
-    right: -100%;
+    right: -30%;
 } 
 .DropdownItem{
     display: block;
@@ -221,13 +239,13 @@ margin-right: 20px;
     height: 37px;
 
     }
-    .ContentWrapper{
-        display: none;
-    } 
     .rightLoginWrapper{
         display: flex;
         width: 80%;
-    } 
+    }
+    .RightSideWrapper {
+        display: none;
+    }
    
     .loginButton{
         color: #3194FF;
@@ -256,14 +274,14 @@ margin-right: 20px;
     .UserName{
         display: none;
     } 
-    .LeftSide {
-        display: flex;
-        justify-content:space-between
-        ; 
-        width: 100%;
-        align-items: center;
-        text-transform: capitalize;
-    } 
+    /*.LeftSide {*/
+    /*    display: flex;*/
+    /*    justify-content:space-between*/
+    /*    ; */
+    /*    width: 100%;*/
+    /*    align-items: center;*/
+    /*    text-transform: capitalize;*/
+    /*} */
     .DropdownContainer{
         display: none;
         box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;
@@ -298,7 +316,42 @@ margin-right: 20px;
         white-space: nowrap;
         background-color: transparent;
         border: 0;
-}   }
+}
+
+    .LeftSide {
+        width: 30%;
+        position: absolute;
+        left: 105%;
+        top: 101%;
+        padding: 2% 3%;
+        flex-direction: column;
+        text-align: left;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: -2px 0 6px rgba(195, 195, 195, 0.7);
+        box-sizing: border-box;
+        animation-name: SlideInAnimation;
+        animation-duration: 1s;
+        transition: left 400ms ease;
+    }
+    .Slide {
+        animation-name: SlideInAnimation;
+        animation-duration: 1s;
+        transition: left 400ms ease;
+    }
+
+    .ContentWrapper {
+        width: 100%;
+        text-align: left;
+        padding: 3px 0;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(195, 195, 195, 0.7);
+        margin: 8px 0;
+    }
+    .ContentWrapper:first-child, .ContentWrapper:last-child {
+        margin: 0;
+    }
+}
 
 @keyframes notificationBell {
     0% {
@@ -321,5 +374,14 @@ margin-right: 20px;
     }
     100% {
         transform: scale(0.9);
+    }
+}
+
+@keyframes SlideInAnimation {
+    0% {
+        left: 105%;
+    }
+    100% {
+        left: 70%
     }
 }

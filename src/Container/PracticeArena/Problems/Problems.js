@@ -11,7 +11,6 @@ class Problems extends Component {
                 titleUpdateData = item
             }
         })
-        console.log(CardData);
 
         const MappedData = CardData.map(item => {
             return (

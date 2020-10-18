@@ -29,6 +29,7 @@ class App extends React.Component {
   checkLoginStatus() {
     if (window.localStorage.getItem("FinalLoginStatus") == null) {
       window.localStorage.setItem("FinalLoginStatus", false)
+      window.localStorage.setItem("UserData", JSON.stringify(""));
       return "false"
     }
     else {

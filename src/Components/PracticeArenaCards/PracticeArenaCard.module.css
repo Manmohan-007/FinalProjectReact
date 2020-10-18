@@ -68,7 +68,7 @@
     }  
     .Thumbnail{
 
-     width: 40%;
+     width: 100%;
 
     } 
     .Card{
@@ -84,6 +84,16 @@
         height: auto; 
      
     
+    }
+    .CardImage {
+        width: 20%;
+    }
+    .CardContent {
+        width: 70%;
+    }
+    .units {
+        right: 0;
+        left: auto;
     }
      
 }    

@@ -16,10 +16,10 @@ class TopicList extends Component {
             return (
             <>
                 <div className={classes.AssignmentStatusCard}>
-                    <div className={classes.AssignmenDetails}>
+                    <div className={classes.AssignmentDetails}>
                         <div className={classes.AssNumName}>
                             <Link to={`/topic/problems/${this.props.match.params.id}/${item.title}`}>
-                                <span className={classes.AssNum}>{item.id}). </span>
+                                <span className={classes.AssName}>{item.id}). </span>
                                 <span className={classes.AssName}>{item.title}</span>
                             </Link>
                         </div>

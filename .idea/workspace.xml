@@ -3,14 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="1a38efeb-be0c-438e-83a8-20ea9e79ea38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/CommonComp/Footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CommonComp/Footer/Footer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CommonComp/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CommonComp/Header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/CommonComp/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CommonComp/Header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PracticeArenaCards/PracticeArenaCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PracticeArenaCards/PracticeArenaCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/PracticeArenaCards/PracticeArenaCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PracticeArenaCards/PracticeArenaCard.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/cards/card.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/cards/card.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/moduleCard/moduleCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/moduleCard/moduleCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/moduleCard/moduleCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/moduleCard/moduleCard.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Container/Classroom/classroom.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Classroom/classroom.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Container/PracticeArena/HomePage/PracticeArenaPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/PracticeArena/HomePage/PracticeArenaPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/PracticeArena/Problems/Problems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/PracticeArena/Problems/Problems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Container/PracticeArena/Problems/Problems.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/PracticeArena/Problems/Problems.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/PracticeArena/Topics/TopicList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/PracticeArena/Topics/TopicList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/PracticeArena/Topics/TopicList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/PracticeArena/Topics/TopicList.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container/program/program.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/program/program.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,10 +68,23 @@
       <workItem from="1602917585332" duration="9732000" />
       <workItem from="1602938265946" duration="5792000" />
       <workItem from="1602946719275" duration="4154000" />
+      <workItem from="1603005787507" duration="9498000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Components/CommonComp/Header/Header.js</url>
+          <line>5</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

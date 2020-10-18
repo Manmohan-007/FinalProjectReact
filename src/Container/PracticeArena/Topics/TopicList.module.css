@@ -7,8 +7,8 @@
     justify-content: space-between;
 
 } 
-.AssignmenDetails{
-
+.AssignmentDetails{
+    width: 70%;
 } 
 .AssNumName{
     margin: 0 0 12px 0; 
@@ -16,9 +16,13 @@
     font-weight: 700;
     font-family: "Raleway",sans-serif;
 } 
-.AssNum ,.AssName{
+.AssName{
   color:   rgba(0,0,0,0.7);
-} 
+}
+
+.AssNumName > a:hover .AssName {
+    color: #000;
+}
 .AssignmentScore{
     font-size: 19px;
     font-weight: 700;
@@ -41,8 +45,7 @@ hr{
 
 } 
 .StudentDashboardCard{ 
-    margin: 95px auto;
-    width: 1200px;
+    margin: 50px 17%;
     background-color: #fff;
     box-shadow: 0 0 25px #ccc;
     border-radius: 4px;
@@ -63,8 +66,12 @@ hr{
     height: 124px;
     width: 124px;
     margin: 24px 24px 24px 0;
+    cursor: pointer;
 
-} 
+}
+.SdCardProfileContainer > img:hover {
+    transform: scale(1.02);
+}
 .SdCardTagsContainer{
     color: #FFF;
     display: flex;
@@ -86,7 +93,7 @@ hr{
     letter-spacing: .4px;
     text-align: left;
     font-family: "Raleway",sans-serif;
-} 
+}
 .Details{
     margin: 0 22px 0 0;
     width: 100%;
@@ -112,4 +119,50 @@ hr{
 .CardStatus{
     width: 90%;
     margin: 20px auto 0px auto;
+}
+
+@media (max-width: 968px) {
+
+    .StudentDashboardCard {
+        margin: 7% 4% 4% 4%;
+    }
+
+    .SdCardProfileContainer > img {
+        width: 20%;
+        height: 20%;
+    }
+
+    .Heading, .Value {
+        font-size: 18px;
+    }
+
+    .AssignmentStatusCard {
+        margin: 12px 0;
+    }
+
+    .AssNumName, .error, .AssignmentScore, .AssName{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .AssignmentDetails {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .StudentDashboardCard {
+        margin: 10% 4%;
+    }
+
+    .Heading, .Value {
+        font-size: 14px;
+    }
+
+    .Tag {
+        font-size: 8px;
+    }
 }

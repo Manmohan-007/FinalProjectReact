@@ -1,13 +1,11 @@
 .cardWrapper{
-    width: 180px;
-    height: 250px;
+    height: 100%;
     box-sizing: border-box;
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow: 0 0 2px #0096ff;
     padding: 12px;
     text-align: center;
     background-color: #fff;
-    margin: 0px 6px;
     cursor: pointer;
 }
 .cardWrapper:hover{
@@ -18,8 +16,8 @@
     box-sizing: border-box;
 }
 .moduleImage{
-    width: 80px;
-    height: 80px;
+    width: 50%;
+    height: 20%;
 }
 .title{
     color: #6E6E6E;
@@ -48,11 +46,9 @@
     font-weight: 600;
 }
 
-@media(max-width: 600px){
-    .cardWrapper{
-        width: calc(200px );
-        /* height: 250px; */
-        margin: 8px 8px;
+@media (max-width: 968px) {
+    .cardWrapper {
+        height: 100%
     }
 }
 

@@ -23,23 +23,38 @@ class Header extends React.Component {
         }
     }
 
+    handleUserName = () => {
+
+        if (JSON.parse(localStorage.getItem("UserData")) !== "" || JSON.parse(localStorage.getItem("UserData")) !== undefined || JSON.parse(localStorage.getItem("UserData")) !== null) {
+            return (JSON.parse(localStorage.getItem("UserData")).UserName)
+        }
+        else {
+            return ("User")
+        }
+    }
+
     render() {
 
         return (
             <>
                 <div className={classes.MainWrapper}>
+                    <div className={classes.LogoWrapper}>
+                        <Link className={classes.LogoLink} to="/">
+                            <img src="https://assessments.edyoda.com/static/images/logo.png" alt="edyoda-logo" />
+                        </Link>
+                    </div>
                     <div className={classes.LeftSide}>
-                        <div className={classes.LogoWrapper}>
-                            <Link className={classes.LogoLink} to="/">
-                                <img src="https://assessments.edyoda.com/static/images/logo.png" alt="edyoda-logo" />
-                            </Link>
-                        </div>
                         <div className={classes.ContentWrapper}><Link to="/" >practice arena</Link> </div>
                         <div className={classes.ContentWrapper} onClick={() => this.classUpdate(this.props)}>classroom</div>
-                        <div className={classes.ContentWrapper}><Link to="/" target="_blank" >View Jobs</Link></div>
-                        <div onClick={this.handleUserClick} className={`${this.props.loginStatus == true ? classes.Hamburger : classes.signUpInactive}`}>
-                            <img src="https://assessments.edyoda.com/static/images/burger-svg-icon.svg" alt="icon" onclick="" />
-                        </div>
+                        <div className={classes.ContentWrapper}><a href="https://recruitcrm.io/jobs/EdYoda_jobs" target="_blank" >View Jobs</a></div>
+
+                    </div>
+                    <div onClick={this.handleUserClick}
+                        className={`${this.props.loginStatus == true ? classes.Hamburger : classes.signUpInactive}`}>
+                        <img
+                            src="https://assessments.edyoda.com/static/images/burger-svg-icon.svg"
+                            alt="icon"
+                            onClick=""/>
                     </div>
 
 
@@ -56,7 +71,9 @@ class Header extends React.Component {
 
                         <div className={classes.DropdownContent}>
                             <Link className={classes.UserName} to="#" onClick={this.handleUserClick} >
-                                {this.props.loginStatus ? this.props.userName : null}
+                                {
+                                    `${this.handleUserName()}`
+                                }
                                 <i class="fas fa-caret-down"></i>
                                 {
                                     console.log(this.props.userName)
