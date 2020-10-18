@@ -102,7 +102,7 @@ class Header extends React.Component {
                                     <Link className={classes.DropdownItemRes} to="#">Profile</Link>
                                     <Link className={classes.DropdownItemRes} to="#" target="_blank" >Update Job Profile</Link>
                                     <div className={classes.DropdownDividerRes} />
-                                    <Link className={classes.DropdownItemRes} onClick={this.props.UserLoggingout} to="#">Log Out </Link>
+                                    <Link className={classes.DropdownItemRes} onClick={() => { this.props.UserLoggingout(); this.OverlayOnClick(); }} to="#">Log Out </Link>
                                     <Link className={classes.DropdownItemRes} to="#">Change Password</Link>
                                 </div>
                             </div>
