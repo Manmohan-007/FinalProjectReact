@@ -21,7 +21,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 20px;
     margin: 0;
     letter-spacing: 0.6px;
     height: 75%;
@@ -44,11 +44,16 @@
 }
 
 .CardImage {
-    width: 40%;
+    width: 30%;
+    margin-right: 12px;
 }
+
+.Thumbnail {
+    width: 100%;
+}
+
 .Thumbnail > img{
-    width: 65px;
-    height: 65px;
+    width: 100%;
 }  
 
 * {

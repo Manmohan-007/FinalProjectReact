@@ -54,7 +54,11 @@ class Header extends React.Component {
             this.overlay.current.style.display = "none"
             document.querySelector(".Userddown").style.display = "";
         }
-        else if (document.querySelector(".LeftSideHam").style.display === "" || document.querySelector(".Userddown").style.display === undefined) {
+
+        else if ((document.querySelector(".LeftSideHam").style.display === "" || document.querySelector(".Userddown").style.display === undefined || document.querySelector(".Userddown").style.display === null || document.querySelector(".LeftSideHam").style.display === "none")) {
+
+            document.querySelectorAll(".LeftSideHam")[0].classList.add('LeftSide')
+
             document.querySelector(".LeftSideHam").style.display = "flex";
             this.overlay.current.style.display = "block"
         }
@@ -72,8 +76,6 @@ class Header extends React.Component {
 
 
     render() {
-        console.log(this.overlay.current)
-
         return (
             <>
                 <div ref={this.overlay} onClick={this.OverlayOnClick} className={`${classes.overlay} overlay`}></div>
@@ -120,9 +122,6 @@ class Header extends React.Component {
                             alt="icon"
                         />
                     </div>
-
-
-
 
                     <div className={this.props.loginStatus == true ? classes.RightSideWrapper : classes.displayBlockUser}>
                         <div className={classes.NotificationWrapper}>

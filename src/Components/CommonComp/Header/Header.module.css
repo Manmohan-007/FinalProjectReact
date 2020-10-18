@@ -51,6 +51,7 @@
     font-weight: 600;
 } 
 .Hamburger{
+    display: none;
     width: 25%;
     text-align: right;
 
@@ -356,6 +357,7 @@ display: none ;
     }
 
     .LeftSide {
+        display: flex;
         width: 30%;
         position: absolute;
         left: 70%;
@@ -367,15 +369,9 @@ display: none ;
         background-color: #fff;
         box-shadow: -2px 0 6px rgba(195, 195, 195, 0.7);
         box-sizing: border-box;
-        /* animation-name: SlideInAnimation;
-        animation-duration: 1s;
-        transition: left 400ms ease; */
-    }
-
-    .Slide {
         animation-name: SlideInAnimation;
-        animation-duration: 1s;
-        transition: left 400ms ease;
+        animation-duration: 200ms;
+        transition: all 0s ease;
     }
 
     .ContentWrapper {
@@ -412,6 +408,7 @@ display: none ;
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 3px 0;
         box-sizing: border-box;
         border-bottom: 1px solid rgba(195, 195, 195, 0.7);
