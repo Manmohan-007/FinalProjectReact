@@ -60,13 +60,23 @@ class Header extends React.Component {
         }
     }
 
+    OverlayOnClick = () => {
+
+        if (this.overlay.current.style.display == "block") {
+            document.querySelector(".LeftSideHam").style.display = "none";
+            this.overlay.current.style.display = "none"
+            document.querySelector(".Userddown").style.display = "none";
+        }
+
+    }
+
 
     render() {
         console.log(this.overlay.current)
 
         return (
             <>
-                <div ref={this.overlay} className={`${classes.overlay} overlay`}></div>
+                <div ref={this.overlay} onClick={this.OverlayOnClick} className={`${classes.overlay} overlay`}></div>
                 <div className={classes.MainWrapper}>
                     <div className={classes.LogoWrapper}>
                         <Link className={classes.LogoLink} to="/">
@@ -92,7 +102,7 @@ class Header extends React.Component {
                                     <Link className={classes.DropdownItemRes} to="#">Profile</Link>
                                     <Link className={classes.DropdownItemRes} to="#" target="_blank" >Update Job Profile</Link>
                                     <div className={classes.DropdownDividerRes} />
-                                    <Link className={classes.DropdownItemRes} onClick={this.props.UserLoggingout} to="#">Log Out </Link>
+                                    <Link className={classes.DropdownItemRes} onClick={() => { this.props.UserLoggingout(); this.OverlayOnClick(); }} to="#">Log Out </Link>
                                     <Link className={classes.DropdownItemRes} to="#">Change Password</Link>
                                 </div>
                             </div>
