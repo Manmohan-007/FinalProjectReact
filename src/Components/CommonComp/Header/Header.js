@@ -60,13 +60,23 @@ class Header extends React.Component {
         }
     }
 
+    OverlayOnClick = () => {
+
+        if (this.overlay.current.style.display == "block") {
+            document.querySelector(".LeftSideHam").style.display = "none";
+            this.overlay.current.style.display = "none"
+            document.querySelector(".Userddown").style.display = "none";
+        }
+
+    }
+
 
     render() {
         console.log(this.overlay.current)
 
         return (
             <>
-                <div ref={this.overlay} className={`${classes.overlay} overlay`}></div>
+                <div ref={this.overlay} onClick={this.OverlayOnClick} className={`${classes.overlay} overlay`}></div>
                 <div className={classes.MainWrapper}>
                     <div className={classes.LogoWrapper}>
                         <Link className={classes.LogoLink} to="/">
