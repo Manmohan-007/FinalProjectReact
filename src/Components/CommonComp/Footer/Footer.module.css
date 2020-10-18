@@ -43,7 +43,11 @@
     color: white; 
     background-color: transparent ;
 
-} 
+}
+
+.Content:hover {
+    text-decoration: underline;
+}
 .ItemIcon{
     margin: 5px 0 5px 0;
     margin-bottom: 5px;
@@ -70,4 +74,25 @@
     margin-left: 4px;
     margin-right: 12px; 
     width:20px ; 
+}
+
+@media(max-width:998px){
+    .MainWrapper{
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: #172146;
+        padding: 62px 12%;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        width: 100%;
+        box-sizing: border-box;
+        margin: auto 0 0 0;
+    } 
+    .FooterItemWrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    } 
+ 
 }

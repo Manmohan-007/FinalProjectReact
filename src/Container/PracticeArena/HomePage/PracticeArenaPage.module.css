@@ -1,22 +1,23 @@
 .MainWrapper {
 
     margin: 0 auto;
-    width: 1200px;
+    max-width: 1200px;
 
+    margin: 0 14%;
 } 
 .Heading1{
-    font-weight: 500;
     font-size: 40px;
     color: rgba(0,0,0,0.8);
     letter-spacing: 1px;
     margin-bottom: 0;
-
+    font-weight: 600;
 } 
 .Heading2{
     margin-top: 10px;
     font-family: Roboto,sans-serif;
     color: rgba(0,0,0,0.6);
-    letter-spacing: 1px; 
+    letter-spacing: 0.5px;
+    font-weight: 500;
 } 
 .MiddleWrapper{
     margin: 1rem;
@@ -24,18 +25,26 @@
     font-family: 'Raleway', sans-serif;
 
 } 
-.CardsWrapper{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
- 
-} 
-.CardsWrapper > a{
-width :  calc(25% - 10px); 
-margin: 5px ;
+/*.CardsWrapper{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    margin: 20px 0;*/
+/*} */
+/*.CardsWrapper > a{*/
+/*    width :  24%;*/
+/*    margin: 5px;*/
+/*}*/
+
+.CardsWrapper {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    justify-content: space-between;
+    grid-row-gap: 6%;
+    height: fit-content;
+    padding: 0 0 24px 0;
 }
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .signupActive{
@@ -49,4 +58,28 @@ box-sizing: border-box;
 }
 .alterLoginActive{
     display: block;
+} 
+
+@media(max-width:968px){
+    .CardsWrapper > a{
+        width :  calc(100% - 10px); 
+        margin:8px 5px ;
+        } 
+        .CardsWrapper{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+         
+        }   
+        .Heading1{
+            font-weight: 500;
+            font-size: 2rem;
+            color: rgba(0,0,0,0.8);
+            letter-spacing: 1px;
+            margin-bottom: 0;
+            margin-top: 18%;
+        
+        }    
+
+
 }

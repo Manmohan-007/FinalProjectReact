@@ -31,12 +31,19 @@
 
 } 
 .ContentWrapper{
-    margin: 0 24px;
-    cursor: pointer
+    margin: 0 22px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
 } 
 .Hamburger{
 display: none ; 
-} 
+}
+
+.ContentWrapper:hover {
+    border-bottom: 1px solid rgba(195,195,195,0.7);
+    transform: scale(1.1);
+}
 
 .Hamburger > img {
 
@@ -58,7 +65,19 @@ margin-right: 20px;
     width: 20px !important;
     height: 45px !important;
 
-} 
+}
+.IconWrapper:hover .Badge {
+    animation-name: notificationCount;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;
+    transition: transform 400ms ease;
+}
+
+.IconWrapper:hover svg {
+    animation-name: notificationBell;
+    animation-duration: 150ms;
+    animation-iteration-count: infinite;
+}
 .Badge{
     display: inline-block;
     padding: .25em .4em;
@@ -71,11 +90,11 @@ margin-right: 20px;
     border-radius: .25rem; 
     min-width: 10px; 
     position: absolute;
-    top: 3px;
-    right: -12px; 
+    top: 2px;
+    right: -8px;
     color: #fff;
     background-color: #dc3545;
-
+    transform: scale(0.9);
 } 
 .DropdownContent{
     position: relative;
@@ -87,10 +106,11 @@ margin-right: 20px;
 
 } 
 .UserName > svg  {
-margin-left: 20px;
-
+    margin-left: 20px;
 } 
-
+.UserName:hover {
+    border-bottom: 1px solid rgba(195,195,195,0.7);
+}
 
 .DropdownContainer{
     display: none;
@@ -151,6 +171,7 @@ margin-left: 20px;
 .loginButton{
     color: #3194FF;
     font-size: 16px;
+    font-weight: 700;
     margin: 0;
     cursor: pointer;
 }
@@ -162,10 +183,143 @@ margin-left: 20px;
     outline: none;
     border: none;
     font-size: 16px;
+    font-weight: 500;
     margin-left: 20px;
     text-transform: capitalize;
     cursor: pointer;
 }
 .signUpInactive{
     display: none;
+} 
+
+
+@media(max-width:968px){
+    .MainWrapper{
+        width: 100%;
+        height: 65px;
+        z-index: 90;
+        padding: 2rem 0.3rem;
+        background-color: #fff;
+        box-shadow: 0 1px 1px #ccc;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        box-sizing: border-box;
+        z-index: 90;
+        font-size: 0.8rem;
+        font-weight: 400;
+        line-height: 1.5;
+        font-family: 'Open Sans', sans-serif;
+    
+    } 
+    .LogoLink >img{
+        width: 180px;
+    height: 37px;
+
+    }
+    .ContentWrapper{
+        display: none;
+    } 
+    .rightLoginWrapper{
+        display: flex;
+        width: 80%;
+    } 
+   
+    .loginButton{
+        color: #3194FF;
+        font-size: 14px;
+        margin: 0;
+        cursor: pointer; 
+    } 
+    .signButton{
+        border-radius: 50px;
+        background: linear-gradient(269deg,#0048ff,#0096ff);
+        color: #fff;
+        padding: 4% 4.9%;
+        outline: none;
+        border: none;
+        font-size: 12px;
+        margin-left: 20px;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+    .Hamburger{
+        display: block ; 
+        } 
+    .NotificationWrapper {
+        display: none;
+    }     
+    .UserName{
+        display: none;
+    } 
+    .LeftSide {
+        display: flex;
+        justify-content:space-between
+        ; 
+        width: 100%;
+        align-items: center;
+        text-transform: capitalize;
+    } 
+    .DropdownContainer{
+        display: none;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;
+        border-color: rgb(0, 0, 0);
+        position: absolute;
+        transform: translate3d(-158px, 22px, 0px);
+        top: 0px;
+        left: 0px;
+        will-change: transform;
+        float: left;
+        min-width: 10rem;
+        padding: .5rem 0;
+        margin: .125rem 0 0;
+        font-size: 0.95rem;
+        color: #212529;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.15);
+        border-radius: .25rem;
+        z-index: 1000;
+    } 
+    .DropdownItem {
+        display: block;
+        width: 100%;
+        padding: .15rem 0.8rem;
+        clear: both;
+        font-weight: 400;
+        color: #212529;
+        text-align: inherit;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+}   }
+
+@keyframes notificationBell {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes notificationCount {
+    80% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
 }
