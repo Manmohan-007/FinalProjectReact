@@ -21,6 +21,7 @@ img{
     border-style: none;
 } 
 
-.ddown{
+.ddown ,.overlay ,.LeftSideHam{
 display: none; 
-}
+} 
+

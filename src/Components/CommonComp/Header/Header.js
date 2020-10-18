@@ -52,6 +52,7 @@ class Header extends React.Component {
         if (document.querySelector(".LeftSideHam").style.display === "flex") {
             document.querySelector(".LeftSideHam").style.display = "";
             this.overlay.current.style.display = "none"
+            document.querySelector(".Userddown").style.display = "";
         }
         else if (document.querySelector(".LeftSideHam").style.display === "" || document.querySelector(".Userddown").style.display === undefined) {
             document.querySelector(".LeftSideHam").style.display = "flex";
@@ -65,7 +66,7 @@ class Header extends React.Component {
 
         return (
             <>
-                <div ref={this.overlay} className={classes.overlay}></div>
+                <div ref={this.overlay} className={`${classes.overlay} overlay`}></div>
                 <div className={classes.MainWrapper}>
                     <div className={classes.LogoWrapper}>
                         <Link className={classes.LogoLink} to="/">
