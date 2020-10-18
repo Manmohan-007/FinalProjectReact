@@ -70,23 +70,42 @@ class Header extends React.Component {
                         </div>
 
                         <div className={classes.DropdownContent}>
-                            <Link className={classes.UserName} to="#" onClick={this.handleUserClick} >
-                                {
-                                    `${this.handleUserName()}`
-                                }
-                                <i class="fas fa-caret-down"></i>
-                                {
-                                    console.log(this.props.userName)
-                                }
-                            </Link>
-                            <div className={`${classes.DropdownContainer} ddown`} >
-                                <Link className={classes.DropdownItem} to="#">Profile</Link>
-                                <Link className={classes.DropdownItem} to="#" target="_blank" >Update Job Profile</Link>
-                                <div className={classes.DropdownDivider} />
-                                <Link className={classes.DropdownItem} onClick={this.props.UserLoggingout} to="#">Log Out </Link>
-                                <Link className={classes.DropdownItem} to="#">Change Password</Link>
+                                <Link
+                                    className={classes.UserName}
+                                    to="#"
+                                    onClick={this.handleUserClick}>
+                                    {
+                                        `${this.handleUserName()}`
+                                    }
+                                    <i className="fas fa-caret-down"></i>
+                                    {
+                                        console.log(this.props.userName)
+                                    }
+                                </Link>
+                                <div
+                                    className={`${classes.DropdownContainer} ddown`}>
+                                    <Link
+                                        className={classes.DropdownItem}
+                                        to="#">Profile</Link>
+                                    <Link
+                                        className={classes.DropdownItem}
+                                        to="#"
+                                        target="_blank">Update
+                                        Job
+                                        Profile</Link>
+                                    <div
+                                        className={classes.DropdownDivider}/>
+                                    <Link
+                                        className={classes.DropdownItem}
+                                        onClick={this.props.UserLoggingout}
+                                        to="#">Log
+                                        Out </Link>
+                                    <Link
+                                        className={classes.DropdownItem}
+                                        to="#">Change
+                                        Password</Link>
+                                </div>
                             </div>
-                        </div>
                     </div>
 
                     <div className={this.props.loginStatus == true ? classes.signUpInactive : classes.rightLoginWrapper}>
