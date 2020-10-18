@@ -458,6 +458,12 @@ display: none ;
     }
 }
 
+@media (max-width: 600px){
+    .LeftSide{
+        width: 70%;
+    }
+}
+
 @keyframes notificationCount {
     80% {
         transform: scale(1);
