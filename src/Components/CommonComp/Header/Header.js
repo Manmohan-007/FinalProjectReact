@@ -44,7 +44,7 @@ class Header extends React.Component {
                         <div className={classes.ContentWrapper}><Link to="/" >practice arena</Link> </div>
                         <div className={classes.ContentWrapper} onClick={() => this.classUpdate(this.props)}>classroom</div>
                         <div className={classes.ContentWrapper}><Link to="/" target="_blank" >View Jobs</Link></div>
-                        <div className={classes.Hamburger}>
+                        <div onClick={this.handleUserClick} className={`${this.props.loginStatus == true ? classes.Hamburger : classes.signUpInactive}`}>
                             <img src="https://assessments.edyoda.com/static/images/burger-svg-icon.svg" alt="icon" onclick="" />
                         </div>
                     </div>
