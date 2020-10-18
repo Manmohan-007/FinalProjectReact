@@ -5,6 +5,10 @@ import { connect } from 'react-redux';
 
 class Header extends React.Component {
 
+
+
+
+    overlay = React.createRef();
     classUpdate(props) {
         if (props.loginStatus == false) {
             props.updateSignUpStatus()
@@ -14,12 +18,23 @@ class Header extends React.Component {
     }
 
     handleUserClick = () => {
-        console.log(document.querySelector(".ddown").style.display);
+
+
         if (document.querySelector(".ddown").style.display === "block") {
             document.querySelector(".ddown").style.display = "";
         }
-        else if (document.querySelector(".ddown").style.display === "") {
+        else if (document.querySelector(".ddown").style.display === "" || document.querySelector(".ddown").style.display === undefined) {
             document.querySelector(".ddown").style.display = "block";
+        }
+    }
+    handleUserClickRes = () => {
+
+        console.log(document.querySelector(".Userddown").style.display);
+        if (document.querySelector(".Userddown").style.display === "flex") {
+            document.querySelector(".Userddown").style.display = "";
+        }
+        else if (document.querySelector(".Userddown").style.display === "" || document.querySelector(".Userddown").style.display === undefined) {
+            document.querySelector(".Userddown").style.display = "flex";
         }
     }
 
@@ -32,29 +47,67 @@ class Header extends React.Component {
             return ("User")
         }
     }
+    handleHamburgerClick = () => {
+
+        if (document.querySelector(".LeftSideHam").style.display === "flex") {
+            document.querySelector(".LeftSideHam").style.display = "";
+            this.overlay.current.style.display = "none"
+        }
+        else if (document.querySelector(".LeftSideHam").style.display === "" || document.querySelector(".Userddown").style.display === undefined) {
+            document.querySelector(".LeftSideHam").style.display = "flex";
+            this.overlay.current.style.display = "block"
+        }
+    }
+
 
     render() {
+        console.log(this.overlay.current)
 
         return (
             <>
+                <div ref={this.overlay} className={classes.overlay}></div>
                 <div className={classes.MainWrapper}>
                     <div className={classes.LogoWrapper}>
                         <Link className={classes.LogoLink} to="/">
                             <img src="https://assessments.edyoda.com/static/images/logo.png" alt="edyoda-logo" />
                         </Link>
                     </div>
-                    <div className={classes.LeftSide}>
+                    <div className={`${classes.LeftSide} LeftSideHam`}>
                         <div className={classes.ContentWrapper}><Link to="/" >practice arena</Link> </div>
                         <div className={classes.ContentWrapper} onClick={() => this.classUpdate(this.props)}>classroom</div>
                         <div className={classes.ContentWrapper}><a href="https://recruitcrm.io/jobs/EdYoda_jobs" target="_blank" >View Jobs</a></div>
+                        <div className={this.props.loginStatus == true ? classes.RightSideWrapper1 : classes.displayBlockUser}>
+                            <div className={classes.DropdownContentRes} >
+                                <Link className={`${classes.UserNameRes} UserRes`} to="#" onClick={this.handleUserClickRes} >
+                                    {
+                                        `${this.handleUserName()}`
+                                    }
+                                    <i class="fas fa-caret-down"></i>
+                                    {
+                                        console.log(this.props.userName)
+                                    }
+                                </Link>
+                                <div className={`Userddown ${classes.DropdownContainerRes} `} >
+                                    <Link className={classes.DropdownItemRes} to="#">Profile</Link>
+                                    <Link className={classes.DropdownItemRes} to="#" target="_blank" >Update Job Profile</Link>
+                                    <div className={classes.DropdownDividerRes} />
+                                    <Link className={classes.DropdownItemRes} onClick={this.props.UserLoggingout} to="#">Log Out </Link>
+                                    <Link className={classes.DropdownItemRes} to="#">Change Password</Link>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={this.props.loginStatus == true ? classes.signUpInactive : classes.rightLoginWrapper}>
+                            <p onClick={() => this.props.updateLoginStatus()} className={classes.loginButtonRes}>Login</p>
+                            <button onClick={() => this.props.updateSignUpStatus()} className={classes.signButtonRes}>Sign up for free</button>
+                        </div>
 
                     </div>
-                    <div onClick={this.handleUserClick}
+                    <div onClick={() => this.handleHamburgerClick()}
                         className={`${this.props.loginStatus == true ? classes.Hamburger : classes.signUpInactive}`}>
                         <img
                             src="https://assessments.edyoda.com/static/images/burger-svg-icon.svg"
                             alt="icon"
-                            onClick=""/>
+                        />
                     </div>
 
 
@@ -69,15 +122,14 @@ class Header extends React.Component {
                             </div>
                         </div>
 
-                        <div className={classes.DropdownContent}>
+                        <div className={classes.DropdownContent} >
                             <Link className={classes.UserName} to="#" onClick={this.handleUserClick} >
                                 {
                                     `${this.handleUserName()}`
                                 }
                                 <i class="fas fa-caret-down"></i>
-                                {
-                                    console.log(this.props.userName)
-                                }
+
+
                             </Link>
                             <div className={`${classes.DropdownContainer} ddown`} >
                                 <Link className={classes.DropdownItem} to="#">Profile</Link>
