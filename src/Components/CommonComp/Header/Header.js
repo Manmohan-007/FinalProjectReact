@@ -86,8 +86,8 @@ class Header extends React.Component {
                         </Link>
                     </div>
                     <div className={`${classes.LeftSide} LeftSideHam`}>
-                        <div className={classes.ContentWrapper}><Link to="/" >practice arena</Link> </div>
-                        <div className={classes.ContentWrapper} onClick={() => this.classUpdate(this.props)}>classroom</div>
+                        <div className={classes.ContentWrapper} onClick={() => { this.OverlayOnClick() ; }  }><Link to="/" >practice arena</Link> </div>
+                        <div className={classes.ContentWrapper} onClick={() => { this.classUpdate(this.props) ; this.OverlayOnClick();}  }>classroom</div>
                         <div className={classes.ContentWrapper}><a href="https://recruitcrm.io/jobs/EdYoda_jobs" target="_blank" >View Jobs</a></div>
                         <div className={this.props.loginStatus == true ? classes.RightSideWrapper1 : classes.displayBlockUser}>
                             <div className={classes.DropdownContentRes} >

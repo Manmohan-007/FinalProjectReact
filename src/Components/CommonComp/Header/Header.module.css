@@ -36,7 +36,7 @@
     width: 25%;
 }
 .LogoWrapper {
-    width: 20%;
+    width: 15%;
 }
 
 .LogoLink > img{
@@ -440,7 +440,18 @@ display: none ;
         border-bottom: 1px solid rgba(195, 195, 195, 0.7);
         width: 100%;
     }
+    .ContentWrapper:hover {
+        border-bottom: 1px solid rgba(195,195,195,0.7);
+        transform: scale(1);
+    }
+}
 
+@media (max-width: 600px){
+    .LeftSide{
+        width: 70%;
+        left: 30%;
+        animation-name: SlideInAnimationMobo;
+    }
 }
 
 @keyframes notificationBell {
@@ -473,5 +484,14 @@ display: none ;
     }
     100% {
         left: 70%
+    }
+}
+
+@keyframes SlideInAnimationMobo {
+    0% {
+        left: 105%
+    }
+    100% {
+        left: 30%
     }
 }
